@@ -1,0 +1,228 @@
+{
+  "data": {
+    "lesson": {
+      "id": 790939,
+      "key": "c81d2f18-9bb4-428d-8724-33bfd0036fff",
+      "title": "Introduction to the Course",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "In this lesson, you will learn more about this course - what will be covered, and who you will be learning from - let's get started!",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/c81d2f18-9bb4-428d-8724-33bfd0036fff/790939/1545026828026/Introduction+to+the+Course+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/c81d2f18-9bb4-428d-8724-33bfd0036fff/790939/1545026823712/Introduction+to+the+Course+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 476055,
+          "key": "9d138215-4f27-41de-a76e-86e7a3ad33ab",
+          "title": "Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9d138215-4f27-41de-a76e-86e7a3ad33ab",
+            "completed_at": "2020-03-29T06:51:40.816Z",
+            "last_viewed_at": "2020-03-29T07:25:01.839Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 760073,
+              "key": "427324b0-4ff3-4d6c-ba14-ecc573360b60",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Spark for Big Data",
+              "instructor_notes": ""
+            },
+            {
+              "id": 760070,
+              "key": "7366a894-a79d-4041-aa16-f16ea803cc2c",
+              "title": "L0 01 Welcome Aboard V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "D7vrej8uLzs",
+                "china_cdn_id": "D7vrej8uLzs.mp4"
+              }
+            },
+            {
+              "id": 760072,
+              "key": "81c2b71d-189b-4012-b083-e20ccfc25c47",
+              "title": "Amount of data",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "81c2b71d-189b-4012-b083-e20ccfc25c47",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "According to the video, how much data is generated every day?",
+                "answers": [
+                  {
+                    "id": "a1540006459768",
+                    "text": "millions of bytes",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1540006460288",
+                    "text": "1 billion bytes",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1540006460711",
+                    "text": "2.5 quintillion bytes",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 476057,
+          "key": "a3cf625d-d6c6-4824-a46d-2e1843a5aede",
+          "title": "Who Are Your Instructors?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a3cf625d-d6c6-4824-a46d-2e1843a5aede",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 760074,
+              "key": "48026c3b-2faa-446d-8e46-070763efe243",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Instructors - Insight Data Science",
+              "instructor_notes": ""
+            },
+            {
+              "id": 760071,
+              "key": "620622f2-ee50-42df-bb5e-570f4875171e",
+              "title": "L0 02 Meet Your Guides V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "1h6ToHj7mcM",
+                "china_cdn_id": "1h6ToHj7mcM.mp4"
+              }
+            },
+            {
+              "id": 760075,
+              "key": "38a23348-7e08-428b-8043-3593765a9122",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# About Insight Data Science\n\nInsight Data Science is a fellowship program for aspiring data scientists, data engineers, and data product managers. You can read more about their fellowship programs on their website [www.insightdatascience.com](https://www.insightdatascience.com/).",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 476059,
+          "key": "b2867053-f71e-4dbb-b987-7389211ac538",
+          "title": "Course Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b2867053-f71e-4dbb-b987-7389211ac538",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 760077,
+              "key": "8f0f1522-964c-4006-81cc-3ba959e5b2cf",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Course Overview",
+              "instructor_notes": ""
+            },
+            {
+              "id": 760076,
+              "key": "725f88e4-e903-4e82-b9d7-40840f8b8f34",
+              "title": "L0 03 What Youll Build V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "P7YAisWITAs",
+                "china_cdn_id": "P7YAisWITAs.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 760078,
+          "key": "1e405ab4-e7d4-44a4-841a-f555df9850fa",
+          "title": "Project Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1e405ab4-e7d4-44a4-841a-f555df9850fa",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 760080,
+              "key": "26a13c6f-605a-469a-be9b-f33bd9690482",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Project Overview",
+              "instructor_notes": ""
+            },
+            {
+              "id": 760079,
+              "key": "cbd739ef-cec8-48dd-9c11-70470cba8384",
+              "title": "L0 04 Project V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "lPCzCEG2yRs",
+                "china_cdn_id": "lPCzCEG2yRs.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

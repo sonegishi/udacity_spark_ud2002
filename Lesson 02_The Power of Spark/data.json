@@ -1,0 +1,1332 @@
+{
+  "data": {
+    "lesson": {
+      "id": 790933,
+      "key": "154f3b0f-3504-4876-8916-6ffeb24a372e",
+      "title": "The Power of Spark",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "In this lesson, you will learn about the problems that Apache Spark is designed to solve. You'll also learn about the greater Big Data ecosystem and how Spark fits into it.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/154f3b0f-3504-4876-8916-6ffeb24a372e/790933/1573514995110/The+Power+of+Spark+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/154f3b0f-3504-4876-8916-6ffeb24a372e/790933/1573514990258/The+Power+of+Spark+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 475943,
+          "key": "2d9b0183-d4da-4e69-b94e-7205be11c52d",
+          "title": "Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2d9b0183-d4da-4e69-b94e-7205be11c52d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 785473,
+              "key": "ff283c89-6f4b-41c0-baf1-76fdbc848588",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Introduction",
+              "instructor_notes": ""
+            },
+            {
+              "id": 785472,
+              "key": "157e1669-d16b-498b-b4b2-6566cee0df3f",
+              "title": "L1 01 Intro WIP V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "RWtS_ErlmXE",
+                "china_cdn_id": "RWtS_ErlmXE.mp4"
+              }
+            },
+            {
+              "id": 770482,
+              "key": "1a9e6843-b15a-4869-900c-b70e618aa6f9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Why Learn Spark?\n\nSpark is currently one of the most popular tools for big data analytics. You might have heard of other tools such as Hadoop. Hadoop is a slightly older technology although still in use by some companies. Spark is generally faster than Hadoop, which is why Spark has become more popular over the last few years.\n\nThere are many other big data tools and systems, each with its own use case. For example, there are database system like [Apache Cassandra](http://cassandra.apache.org/) and SQL query engines like [Presto](https://prestodb.io/). But Spark is still one of the most popular tools for analyzing large data sets.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 527429,
+              "key": "a79d5654-a247-45ed-984d-ee84990a9859",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Here is an outline of the topics we are covering in this lesson:\n* What is big data?\n* Review of the hardware behind big data \n* Introduction to distributed systems\n* Brief history of Spark and big data\n* Common Spark use cases\n* Other technologies in the big data ecosystem",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 475945,
+          "key": "ab1dbe1d-3c7c-4caf-b27d-9b1fdd80fd3d",
+          "title": "What is Big Data?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ab1dbe1d-3c7c-4caf-b27d-9b1fdd80fd3d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 760090,
+              "key": "2b3003b4-ce93-444a-a8a5-6a36416f114b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# What is Big Data?",
+              "instructor_notes": ""
+            },
+            {
+              "id": 760089,
+              "key": "e54ab461-860c-4f68-90e9-6ed7bc77e5e2",
+              "title": "L1 02 What Qualifies As Big Data V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "tGHCCvKKpuo",
+                "china_cdn_id": "tGHCCvKKpuo.mp4"
+              }
+            },
+            {
+              "id": 527443,
+              "key": "fad6b0e5-25f5-4286-b14d-f5182075a7f1",
+              "title": "How well do you know hardware components?",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "fad6b0e5-25f5-4286-b14d-f5182075a7f1",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "To test your current hardware knowledge, match each computer hardware component with the best corresponding description. Don't worry if you're not sure. You'll get more information about this in the next few videos. "
+                },
+                "concepts_label": "Hardware Component",
+                "answers_label": "Description",
+                "concepts": [
+                  {
+                    "text": "Memory",
+                    "correct_answer": {
+                      "id": "a1517274192469",
+                      "text": "Short-term, quick data storage "
+                    }
+                  },
+                  {
+                    "text": "Solid State Drive",
+                    "correct_answer": {
+                      "id": "a1517274225215",
+                      "text": "Long-term, safe data storage"
+                    }
+                  },
+                  {
+                    "text": "Network",
+                    "correct_answer": {
+                      "id": "a1517274244495",
+                      "text": "Connection between computers"
+                    }
+                  },
+                  {
+                    "text": "CPU",
+                    "correct_answer": {
+                      "id": "a1517274319943",
+                      "text": "Brain of the computer"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1517274319943",
+                    "text": "Brain of the computer"
+                  },
+                  {
+                    "id": "a1522903765838",
+                    "text": "Compiler for programs"
+                  },
+                  {
+                    "id": "a1522904019705",
+                    "text": "Cheap, portable data storage"
+                  },
+                  {
+                    "id": "a1522903641208",
+                    "text": "Encryption for private data"
+                  },
+                  {
+                    "id": "a1517274225215",
+                    "text": "Long-term, safe data storage"
+                  },
+                  {
+                    "id": "a1522903474202",
+                    "text": "Binary translator for data"
+                  },
+                  {
+                    "id": "a1517274244495",
+                    "text": "Connection between computers"
+                  },
+                  {
+                    "id": "a1517274192469",
+                    "text": "Short-term, quick data storage "
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 475948,
+          "key": "da4daf02-264c-4372-a7a7-0c78bc3952eb",
+          "title": "Numbers Everyone Should Know",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "da4daf02-264c-4372-a7a7-0c78bc3952eb",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 760091,
+              "key": "5008174d-d866-4b51-979c-f3328aa5a195",
+              "title": "L1 03 Numbers Everyone Should Know General V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "XGQT-uzt4v8",
+                "china_cdn_id": "XGQT-uzt4v8.mp4"
+              }
+            },
+            {
+              "id": 590801,
+              "key": "912bbd7e-d70f-44c9-af81-ba38e9d54971",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In the next few videos, you'll learn about four key hardware components. Understanding these components helps determine whether you are working on a \"big data\" problem or if it's easier to analyze the data locally on your own computer.\n\n**CPU (Central Processing Unit)**  \nThe CPU is the \"brain\" of the computer. Every process on your computer is eventually handled by your CPU. This includes calculations and also instructions for the other components of the compute.\n\n**Memory (RAM)**  \nWhen your program runs, data gets temporarily stored in memory before getting sent to the CPU. Memory is _ephemeral_ storage - when your computer shuts down, the data in the memory is lost.\n\n**Storage (SSD or Magnetic Disk)**  \nStorage is used for keeping data over long periods of time. When a program runs, the CPU will direct the memory to temporarily load data from long-term storage.\n\n**Network (LAN or the Internet)**  \nNetwork is the gateway for anything that you need that isn't stored on your computer. The network could connect to other computers in the same room (a Local Area Network) or to a computer on the other side of the world, connected over the internet.\n\n**Other Numbers to Know?**  \nYou may have noticed a few other numbers involving the L1 and L2 Cache, mutex locking, and branch mispredicts. While these concepts are important for a detailed understanding of what's going on inside your computer, you don't need to worry about them for this course. If you're curious to learn more, check out [Peter Norvig's original blog post](http://norvig.com/21-days.html) from a few years ago, and [an interactive version](http://people.eecs.berkeley.edu/~rcs/research/interactive_latency.html) for today's current hardware.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 760098,
+              "key": "08644748-b0e0-4240-b18a-b4bf88f25b79",
+              "title": "Computer Specs",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "08644748-b0e0-4240-b18a-b4bf88f25b79",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "Rank the hardware component in order from fastest to slowest"
+                },
+                "concepts_label": "Speed",
+                "answers_label": "Hardware Component",
+                "concepts": [
+                  {
+                    "text": "Fastest",
+                    "correct_answer": {
+                      "id": "a1540011179097",
+                      "text": "CPU"
+                    }
+                  },
+                  {
+                    "text": "2nd Fastest",
+                    "correct_answer": {
+                      "id": "a1540011242103",
+                      "text": "Memory (RAM)"
+                    }
+                  },
+                  {
+                    "text": "3rd Fastest",
+                    "correct_answer": {
+                      "id": "a1540011256409",
+                      "text": "Disk Storage (SSD)"
+                    }
+                  },
+                  {
+                    "text": "Slowest",
+                    "correct_answer": {
+                      "id": "a1540011271545",
+                      "text": "Network"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1540011179097",
+                    "text": "CPU"
+                  },
+                  {
+                    "id": "a1540011256409",
+                    "text": "Disk Storage (SSD)"
+                  },
+                  {
+                    "id": "a1540011271545",
+                    "text": "Network"
+                  },
+                  {
+                    "id": "a1540011242103",
+                    "text": "Memory (RAM)"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 527850,
+          "key": "8425cb83-f8c3-4ec0-a1fb-63c2b6a69d17",
+          "title": "Hardware: CPU",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8425cb83-f8c3-4ec0-a1fb-63c2b6a69d17",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 760092,
+              "key": "ac616e37-341d-4733-9d47-886a901f2a93",
+              "title": "L1 04 Numbers Everyone Should Know CPU V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "LNv-urROvr0",
+                "china_cdn_id": "LNv-urROvr0.mp4"
+              }
+            },
+            {
+              "id": 760100,
+              "key": "b7c127d6-0f02-48e1-9377-9e2a426e707f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "The CPU is the brains of a computer. The CPU has a few different functions including directing other components of a computer as well as running mathematical calculations. The CPU can also store small amounts of data inside itself in what are called **registers**.  These registers hold data that the CPU is working with at the moment. \n\nFor example, say you write a program that reads in a 40 MB data file and then analyzes the file. When you execute the code, the instructions are loaded into the CPU. The CPU then instructs the computer to take the 40 MB from disk and store the data in memory (RAM). If you want to sum a column of data, then the CPU will essentially take two numbers at a time and sum them together. The accumulation of the sum needs to be stored somewhere while the CPU grabs the next number.\n\nThis cumulative sum will be stored in a register. The registers make computations more efficient: the registers avoid having to send data unnecessarily back and forth between memory (RAM) and the CPU.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 527872,
+              "key": "1d7d0244-5128-43e5-8698-f9d3bec32464",
+              "title": "Time for Execution",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "1d7d0244-5128-43e5-8698-f9d3bec32464",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "A 2.5 Gigahertz CPU means that the CPU processes 2.5 billion operations per second. Let's say that for each operation, the CPU processes 8 bytes of data. How many bytes could this CPU process per second?",
+                "answers": [
+                  {
+                    "id": "a1517359711194",
+                    "text": "312.5 million bytes per second",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1517361317960",
+                    "text": "3.2 billion bytes per second",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1517361318534",
+                    "text": "20 billion bytes per second",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1517361319102",
+                    "text": "I'm not sure how to calculate this",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 527880,
+              "key": "15efb7d1-fc99-4745-9442-3ece250b01a5",
+              "title": "Analyzing a full day of Tweets",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "15efb7d1-fc99-4745-9442-3ece250b01a5",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Twitter generates about 6,000 tweets per second, and each tweet contains 200 bytes. So in one day, Twitter generates data on the order of:\n\n(6000 tweets / second) x (86400 seconds / day) x (200 bytes / tweet) = 104 billion bytes / day\n\nKnowing that tweets create approximately 104 billion bytes of data per day, how long would it take the 2.5 GigaHertz CPU to analyze a full day of tweets?",
+                "answers": [
+                  {
+                    "id": "a1517364173365",
+                    "text": "0.19 seconds",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1517364250996",
+                    "text": "3.5 seconds",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1517364251708",
+                    "text": "5.2 seconds",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1522909027069",
+                    "text": "47 seconds",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1522909043286",
+                    "text": "136 seconds",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 527881,
+          "key": "3313759c-8725-4b09-9bd1-3d6731163559",
+          "title": "Hardware: Memory",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3313759c-8725-4b09-9bd1-3d6731163559",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 760093,
+              "key": "efd8f7eb-e816-47a6-94db-2d1318b064b2",
+              "title": "L1 05 Numbers Everyone Should Know Memory V4",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Wvz1UeYkjsw",
+                "china_cdn_id": "Wvz1UeYkjsw.mp4"
+              }
+            },
+            {
+              "id": 593044,
+              "key": "419c6b1c-74b8-419f-bcc3-473b46cc1dac",
+              "title": "With CPU and Memory, what else do we need?",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "419c6b1c-74b8-419f-bcc3-473b46cc1dac",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "title": null,
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "It seems like the right combination of CPU and memory can help you quickly load and process data. We could build a single computer with lots of CPUs and a ton of memory. The computer would be incredibly fast.\n\nWhat are the potential trade offs of creating one computer with a lots of CPUs and memory? Reflect on this, and then click Submit to  learn more"
+              },
+              "answer": {
+                "text": "It's true that you could build a computer with a ton of CPU and memory, which is effectively a supercomputer. However, as you'll see in the next video, this approach has its downsides.",
+                "video": null
+              }
+            },
+            {
+              "id": 696473,
+              "key": "e1ac04a7-3c5d-4dde-9d8a-142781d3998d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Watch the video below to learn about an alternative to making one computer with a lot of CPUs and memory.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 760094,
+              "key": "90c47fa8-b466-4d6c-b8bd-eaf34cd25d2a",
+              "title": "L1 06 Memory Efficient Expensive And Ephemeral V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Gx0_7CUFInM",
+                "china_cdn_id": "Gx0_7CUFInM.mp4"
+              }
+            },
+            {
+              "id": 593045,
+              "key": "1412f3d6-a846-4f19-9cfc-71a1001a1f07",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Beyond the fact that memory is expensive and ephemeral, we'll learn that for most use cases in the industry, memory and CPU aren't the bottleneck. Instead the storage and network, which you'll learn about in the next videos, slow down many tasks you'll work on in the industry.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 760099,
+              "key": "dc2d4831-9ede-48a3-a450-072d783f7472",
+              "title": "Limitations of RAM",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "dc2d4831-9ede-48a3-a450-072d783f7472",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What are the limitations of memory (RAM)?",
+                "answers": [
+                  {
+                    "id": "a1540011791194",
+                    "text": "RAM is relatively expensive",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1540012141537",
+                    "text": "You can only fit 8 GB of RAM onto a single computer",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1540012142121",
+                    "text": "Data stored in RAM gets erased when the computer shuts down",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1540012142761",
+                    "text": "Operations in RAM are relatively inefficient compared to disk storage and network operations",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 476039,
+          "key": "0e11805a-4f2d-45fb-a068-12101a2b9045",
+          "title": "Hardware: Storage",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0e11805a-4f2d-45fb-a068-12101a2b9045",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 760101,
+              "key": "d11c833b-8f0b-4fd0-90b7-cbee35c3a875",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Storage",
+              "instructor_notes": ""
+            },
+            {
+              "id": 760095,
+              "key": "27654439-1e8b-4766-aa29-b5f31f07435d",
+              "title": "L1 07 Numbers Everyone Should Know Storage V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "3nL6JM3QbQQ",
+                "china_cdn_id": "3nL6JM3QbQQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 476041,
+          "key": "dd98569d-4642-4ba2-a3aa-9153cc8ace63",
+          "title": "Hardware: Network ",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "dd98569d-4642-4ba2-a3aa-9153cc8ace63",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 760102,
+              "key": "f5e70450-65f5-488e-b3cf-c25330982fd7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Network",
+              "instructor_notes": ""
+            },
+            {
+              "id": 760096,
+              "key": "4aafa3da-8e3c-4de8-991d-72fa89cb3d78",
+              "title": "L1 08 Numbers Everyone Should Know Network V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "MP9fIYT5Vvg",
+                "china_cdn_id": "MP9fIYT5Vvg.mp4"
+              }
+            },
+            {
+              "id": 760104,
+              "key": "240ccaf0-690a-46cb-8c0c-4011e3d70251",
+              "title": "Bottleneck",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "240ccaf0-690a-46cb-8c0c-4011e3d70251",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which component is the biggest bottleneck when working with big data?",
+                "answers": [
+                  {
+                    "id": "a1540015770601",
+                    "text": "Transferring data across a network",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1540015790570",
+                    "text": "Reading to and writing from disk storage (SSD)",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1540015791138",
+                    "text": "Reading to and writing from memory (RAM)",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1540015791570",
+                    "text": "CPU operations",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 476043,
+          "key": "cf88b362-f6ed-4ed6-a969-5dd27a13cc20",
+          "title": "Hardware: Key Ratios",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cf88b362-f6ed-4ed6-a969-5dd27a13cc20",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 760103,
+              "key": "fb70d89b-c3a5-492b-bcc0-840b05de3de5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Key Ratios Review",
+              "instructor_notes": ""
+            },
+            {
+              "id": 760097,
+              "key": "35918677-5dfc-4828-937d-4ec79430fafb",
+              "title": "L1 09 Key Ratios Review V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "VPVGYKQcG7Q",
+                "china_cdn_id": "VPVGYKQcG7Q.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 476086,
+          "key": "85c48454-4299-453d-8ecf-fdb8bd3c02b9",
+          "title": "Small Data Numbers",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "85c48454-4299-453d-8ecf-fdb8bd3c02b9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 760106,
+              "key": "9edc66cf-6fad-4662-9208-a16b6b494dd4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Small Data Numbers",
+              "instructor_notes": ""
+            },
+            {
+              "id": 760105,
+              "key": "197bd7da-c48c-4d90-968e-522d4241144c",
+              "title": "L1 11 Small Data Numbers V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ifpevo_jQxU",
+                "china_cdn_id": "ifpevo_jQxU.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 476088,
+          "key": "5f7dad68-1b5e-480e-9424-93ef1e883303",
+          "title": "Big Data Numbers",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5f7dad68-1b5e-480e-9424-93ef1e883303",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 760108,
+              "key": "462f0ac3-4d8f-43bc-8a7b-380d136f7cd3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Big Data Numbers",
+              "instructor_notes": ""
+            },
+            {
+              "id": 760107,
+              "key": "250da2ee-843e-4b04-a0f1-66411086f9d9",
+              "title": "L1 12 Big Data Numbers Part 1 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "314zCU4O-f4",
+                "china_cdn_id": "314zCU4O-f4.mp4"
+              }
+            },
+            {
+              "id": 593054,
+              "key": "a25ef472-6152-40c5-a287-d903e26c73f7",
+              "title": "What happened to your computer?",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a25ef472-6152-40c5-a287-d903e26c73f7",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What happened to your computer when you started to run the program with the larger data set? Keep in mind that in this current configuration, the data set is stored on your local computer and does not need to travel across a network (Select all that apply)\n",
+                "answers": [
+                  {
+                    "id": "a1522943002965",
+                    "text": "It took too long to move data across the network",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1522943033027",
+                    "text": "The CPU couldn't load data quickly from memory",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1522943039311",
+                    "text": "The memory couldn't load data quickly from storage",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1522943051341",
+                    "text": "The CPU simply couldn't handle the larger data set",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1522943060592",
+                    "text": "The storage couldn't load data quickly from the network",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1522943080362",
+                    "text": "The CPU couldn't load data quickly from the network",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 771295,
+              "key": "66964d0c-24fd-4593-9e1b-98a88ede3e01",
+              "title": "L1 14 Big Data Numbers Part 2 V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "QjPr7qeJTQk",
+                "china_cdn_id": "QjPr7qeJTQk.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 476090,
+          "key": "44685991-59d1-4ebb-bfaa-b5b18a644b70",
+          "title": "Medium Data Numbers",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "44685991-59d1-4ebb-bfaa-b5b18a644b70",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 760111,
+              "key": "6fedd003-27b7-4592-bdd1-901bdd64c18c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Medium Data Numbers",
+              "instructor_notes": ""
+            },
+            {
+              "id": 760110,
+              "key": "353a71a5-e2a5-4074-be4f-871e092f92b2",
+              "title": "L1 15 Medium Data Numbers V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "5E0VLIhch6I",
+                "china_cdn_id": "5E0VLIhch6I.mp4"
+              }
+            },
+            {
+              "id": 760112,
+              "key": "401fe96f-7d35-46b7-9102-4046e7686b8f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "If a dataset is larger than the size of your RAM, you might still be able to analyze the data on a single computer. By default, the Python pandas library will read in an entire dataset from disk into memory. If the dataset is larger than your computer's memory, the program won't work.\n\nHowever, the Python pandas library can read in a file in smaller chunks. Thus, if you were going to calculate summary statistics about the dataset such as a sum or count, you could read in a part of the dataset at a time and accumulate the sum or count.\n\n[Here](http://pandas.pydata.org/pandas-docs/stable/user_guide/io.html#io-chunking) is an example of how this works.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 476099,
+          "key": "54038ace-c78e-4774-817d-4ca17e4bef21",
+          "title": "History of Distributed Computing",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54038ace-c78e-4774-817d-4ca17e4bef21",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 760114,
+              "key": "2c5d0e77-a964-4c10-99ad-519de36d62f0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# History of Distributed and Parallel Computing",
+              "instructor_notes": ""
+            },
+            {
+              "id": 760113,
+              "key": "44eb50b4-ded8-4d90-bd70-c9b5c9cb7e72",
+              "title": "L1 17 History Of Parallel Computing Distributed Systems V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "9CRZURNg2zs",
+                "china_cdn_id": "9CRZURNg2zs.mp4"
+              }
+            },
+            {
+              "id": 760115,
+              "key": "7fce619c-5acd-4fe5-b8a0-98fec08af0fc",
+              "title": "Mark what is true",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "7fce619c-5acd-4fe5-b8a0-98fec08af0fc",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Mark the statements that are true.",
+                "answers": [
+                  {
+                    "id": "a1540019733091",
+                    "text": "Generally speaking, distributed computing assumes that multiple CPUs are sharing a single source of memory.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1540019744096",
+                    "text": "Parallel computing is another way of saying distributed computing",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1540019744583",
+                    "text": "In general parallel computing implies multiple CPUs share the same memory.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1540019745160",
+                    "text": "With distributed computing, each CPU has its own memory.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1540019881457",
+                    "text": "In distributed computing, each computer/machine is connected to the other machines across a network.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 476102,
+          "key": "30000fe9-e616-43c6-8693-ce8642134429",
+          "title": "The Hadoop Ecosystem",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30000fe9-e616-43c6-8693-ce8642134429",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 760117,
+              "key": "be1c3b86-1fc6-4e7b-9158-630b8f35515e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# The Hadoop Ecosystem",
+              "instructor_notes": ""
+            },
+            {
+              "id": 760116,
+              "key": "cebcf1f5-fe3d-4b6c-b3c7-d330312903c9",
+              "title": "L1 18 The Hadoop Ecosystem And New Technologies For Data Processing V5",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "0CgMtPYwLR8",
+                "china_cdn_id": "0CgMtPYwLR8.mp4"
+              }
+            },
+            {
+              "id": 760118,
+              "key": "88244b91-3494-4deb-9744-ffa8db2c3fd2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Hadoop Vocabulary\n\nHere is a list of some terms associated with Hadoop. You'll learn more about these terms and how they relate to Spark in the rest of the lesson.\n\n* [Hadoop](https://hadoop.apache.org/) - an ecosystem of tools for big data storage and data analysis. Hadoop is an older system than Spark but is still used by many companies. The major difference between Spark and Hadoop is how they use memory. Hadoop writes intermediate results to disk whereas Spark tries to keep data in memory whenever possible. This makes Spark faster for many use cases.\n\n* **Hadoop MapReduce** - a system for processing and analyzing large data sets in parallel. \n\n* **Hadoop YARN** - a resource manager that schedules jobs across a cluster. The manager keeps track of what computer resources are available and then assigns those resources to specific tasks.\n\n* **Hadoop Distributed File System (HDFS)** - a big data storage system that splits data into chunks and stores the chunks across a cluster of computers. \n\n\nAs Hadoop matured, other tools were developed to make Hadoop easier to work with. These tools included:\n* **Apache Pig** - a SQL-like language that runs on top of Hadoop MapReduce\n* **Apache Hive** - another SQL-like interface that runs on top of Hadoop MapReduce\n\nOftentimes when someone is talking about Hadoop in general terms, they are actually talking about Hadoop MapReduce. However, Hadoop is more than just MapReduce. In the next part of the lesson, you'll learn more about how MapReduce works.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 760120,
+              "key": "5e9e213d-23ae-43ab-a6f8-05af0085e41c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# How is Spark related to Hadoop?\n\nSpark, which is the main focus of this course, is another big data framework. Spark contains libraries for data analysis, machine learning, graph analysis, and streaming live data. Spark is generally faster than Hadoop. This is because Hadoop writes intermediate results to disk whereas Spark tries to keep intermediate results in memory whenever possible.\n\nThe Hadoop ecosystem includes a distributed file storage system called HDFS (Hadoop Distributed File System). Spark, on the other hand, does not include a file storage system. You can use Spark on top of HDFS but you do not have to. Spark can read in data from other sources as well such as [Amazon S3](https://aws.amazon.com/s3/).",
+              "instructor_notes": ""
+            },
+            {
+              "id": 770515,
+              "key": "e50e35b1-5314-4902-ab72-10847ff3b9ce",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Streaming Data\n\nData streaming is a specialized topic in big data. The use case is when you want to store and analyze data in real-time such as Facebook posts or Twitter tweets.\n\nSpark has a streaming library called [Spark Streaming](https://spark.apache.org/docs/latest/streaming-programming-guide.html) although it is not as popular and fast as some other streaming libraries. Other popular streaming libraries include [Storm](http://storm.apache.org/) and  [Flink](https://flink.apache.org/). Streaming won't be covered in this course, but you can follow these links to learn more about these technologies.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 476104,
+          "key": "8f702761-1c16-4ec6-90d3-292d3196ab0e",
+          "title": "MapReduce",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8f702761-1c16-4ec6-90d3-292d3196ab0e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 760123,
+              "key": "e277984a-025b-4b1f-bf2d-3df4b26e957f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# MapReduce",
+              "instructor_notes": ""
+            },
+            {
+              "id": 769719,
+              "key": "4cde19ba-c9a9-4562-8ab2-c0eb4d0fdad1",
+              "title": "L1 19 MapReduce V4",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ErgNIy7z4SE",
+                "china_cdn_id": "ErgNIy7z4SE.mp4"
+              }
+            },
+            {
+              "id": 760124,
+              "key": "3e5d93ab-3c82-4bec-ac7e-fcd828395763",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "MapReduce is a programming technique for manipulating large data sets. \"Hadoop MapReduce\" is a specific implementation of this programming technique.\n\nThe technique works by first dividing up a large dataset and distributing the data across a cluster. In the map step, each data is analyzed and converted into a (key, value) pair. Then these key-value pairs are shuffled across the cluster so that all keys are on the same machine. In the reduce step, the values with the same keys are combined together.\n\nWhile Spark doesn't implement MapReduce, you can write Spark programs that behave in a similar way to the map-reduce paradigm. In the next section, you will run through a code example.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 770503,
+              "key": "38aeecdc-8fc9-4886-b6b3-d2e866b034f3",
+              "title": "map reduce",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "38aeecdc-8fc9-4886-b6b3-d2e866b034f3",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "In the map-reduce paradigm, what happens in the shuffle step?",
+                "answers": [
+                  {
+                    "id": "a1540584172215",
+                    "text": "The data gets randomly shuffled for cross validation purposes.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1540584405325",
+                    "text": "Calculations are done to find the sum of all values with the same key.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1540584406077",
+                    "text": "Each value in the data set goes through some mathematical operation.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1540584407235",
+                    "text": "Data points with the same key get moved to the same cluster node.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 760125,
+          "key": "ed071b31-01b7-4041-b8be-c393c1baaadb",
+          "title": "Hadoop MapReduce [Demo]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ed071b31-01b7-4041-b8be-c393c1baaadb",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 760126,
+              "key": "8daa1647-7b07-411e-a162-b1c47cc8f957",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewls3yfn5apnj",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-nn06n8h33dh",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/mapreduce_practice.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 476107,
+          "key": "ce0fba14-8794-402a-9703-f84b8cb93af3",
+          "title": "The Spark Cluster",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ce0fba14-8794-402a-9703-f84b8cb93af3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 797317,
+              "key": "ae390839-ee3f-4e53-8b98-09b66cabb2d2",
+              "title": "L1 21 Cluster Configuration V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "DpPD5hhvspg",
+                "china_cdn_id": "DpPD5hhvspg.mp4"
+              }
+            },
+            {
+              "id": 769722,
+              "key": "9ea4972e-9b8b-45b3-9e43-970050f7872f",
+              "title": "Local vs Cluster Mode",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9ea4972e-9b8b-45b3-9e43-970050f7872f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "In which cases would you use Local Mode?",
+                "answers": [
+                  {
+                    "id": "a1540434165893",
+                    "text": "When you are working with a computer cluster that only has two machines",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1540434241097",
+                    "text": "For distributed computing across a cluster",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1540434241780",
+                    "text": "When you are working with Spark installed on your own laptop",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1540434242331",
+                    "text": "There is never a reason to use local mode since you're not taking advantage of Spark's ability to work on a cluster: you should be using Standalone, YARN, or Mesos",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 476109,
+          "key": "49ac7e52-1d08-4661-9b33-7e1c43b877a4",
+          "title": "Spark Use Cases",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "49ac7e52-1d08-4661-9b33-7e1c43b877a4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 769723,
+              "key": "d191e075-965c-452d-a424-02c2376f294e",
+              "title": "L1 23 Spark Use Cases Analytics ML Streaming And Graphs V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "2oq2uzU69T4",
+                "china_cdn_id": "2oq2uzU69T4.mp4"
+              }
+            },
+            {
+              "id": 718644,
+              "key": "095682d6-85be-447c-94fe-401d110a2503",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Spark Use Cases and Resources\n\nHere are a few resources about different Spark use cases:\n* [Data Analytics](http://spark.apache.org/sql/)\n* [Machine Learning](http://spark.apache.org/mllib/)\n* [Streaming](http://spark.apache.org/streaming/)\n* [Graph Analytics](http://spark.apache.org/graphx/)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 718643,
+              "key": "b011d389-be87-4599-903f-41fcc5f8dc8f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# You Don't Always Need Spark\n\nSpark is meant for big data sets that cannot fit on one computer. But you don't need Spark if you are working on smaller data sets.  In the cases of data sets that can fit on your local computer, there are many other options out there you can use to manipulate data such as:\n\n* [AWK](https://en.wikipedia.org/wiki/AWK) - a command line tool for manipulating text files\n* [R](https://www.r-project.org/) - a programming language and software environment for statistical computing\n* [Python PyData Stack](https://pydata.org/downloads.html), which includes pandas, Matplotlib, NumPy, and scikit-learn among other libraries\n\nSometimes, you can still use pandas on a single, local machine even if your data set is only a little bit larger than memory. Pandas can read data in chunks. Depending on your use case, you can filter the data and write out the relevant parts to disk.\n\nIf the data is already stored in a relational database such as [MySQL](https://www.mysql.com/) or [Postgres](https://www.postgresql.org/), you can leverage SQL to extract, filter and aggregate the data.  If you would like to leverage pandas and SQL simultaneously, you can use libraries such as [SQLAlchemy](https://www.sqlalchemy.org/), which provides an abstraction layer to manipulate SQL tables with generative Python expressions.\n\nThe most commonly used Python Machine Learning library is [scikit-learn](http://scikit-learn.org/stable/). It has a wide range of algorithms for classification, regression, and clustering, as well as utilities for preprocessing data, fine tuning model parameters and testing their results. However, if you want to use more complex algorithms - like deep learning - you'll need to look further. [TensorFlow](https://www.tensorflow.org/) and [PyTorch](https://pytorch.org/) are currently popular packages.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 718844,
+              "key": "0b9f5e0d-98d9-44a3-8f59-9358f77e13ae",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Spark's Limitations\n\nSpark has some limitation. \n\nSpark Streaming’s latency is at least 500 milliseconds since it operates on micro-batches of records, instead of processing one record at a time. Native streaming tools such as [Storm](http://storm.apache.org/), [Apex](https://apex.apache.org/), or [Flink](https://flink.apache.org/) can push down this latency value and might be more suitable for low-latency applications. Flink and Apex can be used for batch computation as well, so if you're already using them for stream processing, there's no need to add Spark to your stack of technologies.\n\nAnother limitation of Spark is its selection of machine learning algorithms. Currently, Spark only supports algorithms that scale linearly with the input data size. In general, deep learning is not available either, though there are many projects integrate Spark with Tensorflow and other deep learning tools.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 718845,
+              "key": "cae5493d-b3cd-4546-af31-5ad10d819a74",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Hadoop versus Spark\n\nThe Hadoop ecosystem is a slightly older technology than the Spark ecosystem. In general, Hadoop MapReduce is slower than Spark because Hadoop writes data out to disk during intermediate steps. However, many big companies, such as Facebook and LinkedIn, started using Big Data early and built their infrastructure around the Hadoop ecosystem. \n\nWhile Spark is great for iterative algorithms, there is not much of a performance boost over Hadoop MapReduce when doing simple counting. Migrating legacy code to Spark, especially on hundreds of nodes that are already in production, might not be worth the cost for the small performance boost.\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 718701,
+              "key": "b06067e8-dd63-4a98-9cfd-071d982b3551",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Beyond Spark for Storing and Processing Big Data\n\nKeep in mind that Spark is not a data storage system, and there are a number of tools besides Spark that can be used to process and analyze large datasets.  \n\nSometimes it makes sense to use the power and simplicity of SQL on big data. For these cases, a new class of databases, know as NoSQL and NewSQL, have been developed.\n\nFor example, you might hear about newer database storage systems like [HBase](https://hbase.apache.org/) or [Cassandra](http://cassandra.apache.org/). There are also distributed SQL engines like [Impala](https://impala.apache.org/) and [Presto](https://prestodb.io/). Many of these technologies use query syntax that you are likely already familiar with based on your experiences with Python and SQL. \n\nIn the lessons ahead, you will learn about Spark specifically, but know that many of the skills you already have with SQL, Python, and soon enough, Spark, will also be useful if you end up needing to learn any of these additional Big Data tools.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 476137,
+          "key": "1b487566-a510-44b5-a71e-1fe2f758785a",
+          "title": "Summary",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1b487566-a510-44b5-a71e-1fe2f758785a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 769724,
+              "key": "9b2769da-b84a-400f-b20b-2a3d3353212d",
+              "title": "L1 28 Outro V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "MFuLzMYzvo4",
+                "china_cdn_id": "MFuLzMYzvo4.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

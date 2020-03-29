@@ -1,0 +1,959 @@
+{
+  "data": {
+    "lesson": {
+      "id": 790935,
+      "key": "4ad83923-fb08-49f1-8372-3e4bcb19d0d3",
+      "title": "Debugging and Optimization",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "In this lesson, you will learn to run Spark on a distributed cluster in AWS, and learn best practices for debugging and optimizing your Spark applications. ",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/4ad83923-fb08-49f1-8372-3e4bcb19d0d3/790935/1563236248335/Debugging+and+Optimization+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/4ad83923-fb08-49f1-8372-3e4bcb19d0d3/790935/1563236241894/Debugging+and+Optimization+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 701904,
+          "key": "87e42054-edf3-4e19-b352-351f6753e5a3",
+          "title": "Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "87e42054-edf3-4e19-b352-351f6753e5a3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827595,
+              "key": "791cd846-e5e1-43bb-9006-9585d6f19eb5",
+              "title": "L3 01 01 Intro V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "efzIn_CtvAM",
+                "china_cdn_id": "efzIn_CtvAM.mp4"
+              }
+            },
+            {
+              "id": 701905,
+              "key": "397d5abd-7405-4237-b3c3-6c8914cc3b1e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Welcome to the Debugging and Optimization lesson!\n\nIn this lesson, you will notice our Instructors primarily teaching through demos and lecture. As debugging and optimization are more conceptual, use this lesson to apply it in the more practical areas of other lessons in the Spark course. \n\nEnjoy!",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 701907,
+          "key": "9e906736-c5f7-45a6-b47a-e43e4c28dfa8",
+          "title": "From Local to Standalone Mode",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9e906736-c5f7-45a6-b47a-e43e4c28dfa8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827596,
+              "key": "445131a2-2a59-418f-8816-4c259790a740",
+              "title": "L3 02 01 From Local Mode To Cluster Mode V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "EeBWbABm_Qc",
+                "china_cdn_id": "EeBWbABm_Qc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701906,
+          "key": "844a6db6-e033-4e84-a0f6-22f3d4b137d5",
+          "title": "Setup Instructions AWS ",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "844a6db6-e033-4e84-a0f6-22f3d4b137d5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 900294,
+              "key": "7709c995-650a-4aa1-9d14-f0ffcdcf1dcc",
+              "title": "Spark L3 SC 04 Setup Instructions AWS",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ZVdAEMGDFdo",
+                "china_cdn_id": "ZVdAEMGDFdo.mp4"
+              }
+            },
+            {
+              "id": 1008729,
+              "key": "5b7c91bb-cbb1-4ef6-af41-cdf8abf4acb8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "__Errors in video: __\n1. __AWS does not allow standalone mode__: The video describes that AWS offers to run Spark on Standalone Mode at timestamp 2.50. This is inaccurate. AWS does not allow standalone mode - only YARN mode. More context is available at this [AWS discussion forum post](https://forums.aws.amazon.com/thread.jspa?threadID=231422).\n\n2. __Cost for using AWS EMR clusters:__  Please note that for all nodes on the the cluster, AWS charges EMR on top of EC2 cost. The true cost of a cluster with 1 master + 2 core on m5.xlarge (which is more than sufficient for the exercises) would be around $0.75/hour. Note the cost for the EMR clusters on top of AWC EC2 (https://aws.amazon.com/emr/pricing/).  <br><BR>\n_Remember:_  __ You have limited credits that should be adequate for your exercises.  If you forget to shut off any connection with an AWS instance when you are not actively using the AWS instance for the exercise, you may exhaust your credits. __",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 947356,
+          "key": "c7e9b913-bcb9-4bc3-adca-e8685c0a3c02",
+          "title": "Using Notebooks on your Cluster",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c7e9b913-bcb9-4bc3-adca-e8685c0a3c02",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 947357,
+              "key": "a86dd2c4-1b95-410d-bb26-4027e5eacc82",
+              "title": "Spark L3 SC 10 Reading And Writing To Amazon S3 Part 1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "EcIYPkCkehY",
+                "china_cdn_id": "EcIYPkCkehY.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701911,
+          "key": "e1e56c84-d0fd-462a-8ff0-e432ba2d5bef",
+          "title": "Spark Scripts",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e1e56c84-d0fd-462a-8ff0-e432ba2d5bef",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827598,
+              "key": "6104221c-6b94-4fca-91f2-77c053a5bcf7",
+              "title": "L3 02 02 What Is A Spark Script V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "bfOocPv54EI",
+                "china_cdn_id": "bfOocPv54EI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 959984,
+          "key": "832722ba-3ff8-4917-9f26-459c4f859ce2",
+          "title": "Demo: Connecting to your Cluster",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "832722ba-3ff8-4917-9f26-459c4f859ce2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 959985,
+              "key": "81a0f353-d352-41d8-84f4-883bda824e35",
+              "title": "Spark L3 SC 06 From Local To Standalone Mode",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "6WVLlqsQ_Bo",
+                "china_cdn_id": "6WVLlqsQ_Bo.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701916,
+          "key": "7972a421-94b0-4e21-85e2-9726372cfbae",
+          "title": "Submitting Spark Scripts",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7972a421-94b0-4e21-85e2-9726372cfbae",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 900295,
+              "key": "1b2de017-d4c7-4f5a-bb4f-cb852ae19fbd",
+              "title": "Spark L3 SC 08 Submitting Spark Scripts",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ZcSfIqAgoUQ",
+                "china_cdn_id": "ZcSfIqAgoUQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701917,
+          "key": "bd543066-c3eb-4d40-bc43-6934f634a0af",
+          "title": "Storing and Retrieving Data on the Cloud",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bd543066-c3eb-4d40-bc43-6934f634a0af",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827599,
+              "key": "d3f2f02e-23b2-43a0-b709-d958ed420a7e",
+              "title": "L3 02 03 What Is Amazon S3 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "MrF2sHdpXJo",
+                "china_cdn_id": "MrF2sHdpXJo.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701924,
+          "key": "9f1e6bf0-78ec-43d1-bea5-df8d3fafc006",
+          "title": "Reading and Writing to Amazon S3 ",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9f1e6bf0-78ec-43d1-bea5-df8d3fafc006",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1008736,
+              "key": "913e68b4-0672-4af5-95c3-be38be8d4094",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Let's start with going to the __Notebook tab on the Amazon EMR Menu__.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 900297,
+              "key": "c94de072-021d-407d-b886-a3fb84117c3e",
+              "title": "Spark L3 SC 10 Reading And Writing To Amazon S3 Part 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "j4kpT3DQ8i8",
+                "china_cdn_id": "j4kpT3DQ8i8.mp4"
+              }
+            },
+            {
+              "id": 900300,
+              "key": "0690ab14-bed0-408a-abf5-5b175516cb04",
+              "title": "Spark L3 SC 10 Reading And Writing To Amazon S3 Part 3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "yXfb4vwg7aM",
+                "china_cdn_id": "yXfb4vwg7aM.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701925,
+          "key": "22a088f7-536d-4606-b162-f4533e73d9c6",
+          "title": "Introduction to HDFS",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "22a088f7-536d-4606-b162-f4533e73d9c6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827601,
+              "key": "e6dcfaa2-86a2-4379-86fe-8979a6b42cc8",
+              "title": "L3 02 04 Intro To HDFS V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "vsB_VLoiwyc",
+                "china_cdn_id": "vsB_VLoiwyc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701926,
+          "key": "580f218e-e518-4294-8d12-1dae02a8e128",
+          "title": "Reading and Writing Data to HDFS",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "580f218e-e518-4294-8d12-1dae02a8e128",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 900299,
+              "key": "0608d03d-5bb5-4768-a9a0-7bead2ebb87f",
+              "title": "Spark L3 SC 12 Reading And Writing Data To HDFS",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "IVdbgtCLnmA",
+                "china_cdn_id": "IVdbgtCLnmA.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701928,
+          "key": "dfc84e23-3ba1-4b66-a0eb-be5d4d570f8b",
+          "title": "Recap Local Mode to Cluster Mode",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "dfc84e23-3ba1-4b66-a0eb-be5d4d570f8b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827607,
+              "key": "b7149a64-783b-4961-afc3-d3d4123fa21d",
+              "title": "L3 02 05 Recap Local Mode To Cluster Mode V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "W434NZOxrhk",
+                "china_cdn_id": "W434NZOxrhk.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701929,
+          "key": "9cbd06af-fc68-4127-a0d2-b8b0bde6bbc4",
+          "title": "Debugging is Hard",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9cbd06af-fc68-4127-a0d2-b8b0bde6bbc4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827608,
+              "key": "2b837ee6-ee97-48cb-ad79-f4ca8e076e43",
+              "title": "L3 03 01 Why Debugging In Spark Is Hard V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "nMnt9Z7LM44",
+                "china_cdn_id": "nMnt9Z7LM44.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701931,
+          "key": "0c1adea3-44e0-4b36-8f1e-1b2c836df293",
+          "title": "Syntax Errors",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0c1adea3-44e0-4b36-8f1e-1b2c836df293",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827609,
+              "key": "e33e15f4-a29e-45c4-aabd-0b83ebd33ce9",
+              "title": "L3 03 02 Syntax Errors V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "kZp6ifsGQjE",
+                "china_cdn_id": "kZp6ifsGQjE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701932,
+          "key": "66cc68a2-8f38-4125-89a3-7ebfdec0d9cb",
+          "title": "Code Errors",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "66cc68a2-8f38-4125-89a3-7ebfdec0d9cb",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 900301,
+              "key": "170da26e-374c-4da4-95d9-adee0df92de5",
+              "title": "Spark L3 SC 16 Code Errors",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "UfG2TGlIDPk",
+                "china_cdn_id": "UfG2TGlIDPk.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701933,
+          "key": "09b57937-9d56-4a80-90d6-db3535ec7a5f",
+          "title": "Data Errors",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "09b57937-9d56-4a80-90d6-db3535ec7a5f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827610,
+              "key": "8aa0e9ac-7f17-4c41-b2b7-f37bda470cdb",
+              "title": "L3 03 03 Data Errors V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "GzY9T-Oki3M",
+                "china_cdn_id": "GzY9T-Oki3M.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701934,
+          "key": "c2c1a43e-9b63-4d84-b391-859f31ffc51a",
+          "title": "Demo: Data Errors",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c2c1a43e-9b63-4d84-b391-859f31ffc51a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 900302,
+              "key": "05a0539e-b456-4f23-8d87-08a3e7f3abe1",
+              "title": "Spark L3 SC 18 Data Errors",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "cWCqTRbqQTc",
+                "china_cdn_id": "cWCqTRbqQTc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701936,
+          "key": "7a4de2b3-f54f-41a6-a2df-a7cd56d22718",
+          "title": "Debugging your Code",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7a4de2b3-f54f-41a6-a2df-a7cd56d22718",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827612,
+              "key": "4425e17e-8a97-4e22-86c4-42bc8fc5ab39",
+              "title": "L3 03 04 Debugging Your Code V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "MLrMvzj7Scw",
+                "china_cdn_id": "MLrMvzj7Scw.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701938,
+          "key": "cdf6559f-c799-4b66-a9e0-28c417cbf9da",
+          "title": "How to Use Accumulators",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cdf6559f-c799-4b66-a9e0-28c417cbf9da",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 900303,
+              "key": "ee62a553-8555-4c55-8c66-bf165bf20e8e",
+              "title": "Spark L3 SC 21 How To Use Accumulators",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "oV1PmKf9Spc",
+                "china_cdn_id": "oV1PmKf9Spc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701940,
+          "key": "863eb5a3-59e7-4aae-9f81-dd8b35765945",
+          "title": "Spark WebUI",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "863eb5a3-59e7-4aae-9f81-dd8b35765945",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827613,
+              "key": "c63d611a-edaf-4d8c-bf8e-deda56438036",
+              "title": "L3 04 01 What Is The Spark WebUI V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "9tK8QntvZso",
+                "china_cdn_id": "9tK8QntvZso.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701942,
+          "key": "50d57a17-5e5d-41a1-a9fc-b7f6e3236eb1",
+          "title": "Connecting to the Spark Web UI",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "50d57a17-5e5d-41a1-a9fc-b7f6e3236eb1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827614,
+              "key": "989eaec3-ffc2-4d22-a880-8b2291febb6b",
+              "title": "L3 04 02 Connecting The The Spark WebUI V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "o_ZjFja3uiA",
+                "china_cdn_id": "o_ZjFja3uiA.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701943,
+          "key": "20a54a1c-ccad-4bb0-ab5c-8cdb5fc16c03",
+          "title": "Getting Familiar with the Spark UI",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "20a54a1c-ccad-4bb0-ab5c-8cdb5fc16c03",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 900304,
+              "key": "f02edbd1-f391-479a-bfb1-c1db521a0c73",
+              "title": "Spark L3 SC 24 Getting Familiar With The Spark UI",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "88JQIalP84M",
+                "china_cdn_id": "88JQIalP84M.mp4"
+              }
+            },
+            {
+              "id": 899086,
+              "key": "82c0ab04-fae5-48c5-b6e4-171084034265",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "For further information see the [Monitoring and Instrumentation](https://spark.apache.org/docs/latest/monitoring.html) section of the Spark documentation.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 701962,
+          "key": "ffe31174-b969-4f92-b875-f94e61a1dbd7",
+          "title": "Review of the Log Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ffe31174-b969-4f92-b875-f94e61a1dbd7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 900305,
+              "key": "d3af0737-813b-4c11-be82-b622627096a9",
+              "title": "Spark L3 SC 25 Review Of The Log Data",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "2H8jTcxamlU",
+                "china_cdn_id": "2H8jTcxamlU.mp4"
+              }
+            },
+            {
+              "id": 899085,
+              "key": "9e7b6ca2-9e25-47bb-9fb0-6b23858bb954",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "For further information see the [Configuring Logging](https://spark.apache.org/docs/latest/configuration.html) section of the Spark documentation.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 701963,
+          "key": "3a79e71b-328e-43c0-8406-c862260023ae",
+          "title": "Diagnosing Errors Part I",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3a79e71b-328e-43c0-8406-c862260023ae",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827619,
+              "key": "74db1eed-8071-468e-9dd6-db1a50d7eb72",
+              "title": "L3 05 03 Diagnosing Errors Part 1 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "6H9g0aDecPI",
+                "china_cdn_id": "6H9g0aDecPI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701964,
+          "key": "098116ad-ed37-4427-8043-0fcec8027a23",
+          "title": "Diagnosing Errors Part 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "098116ad-ed37-4427-8043-0fcec8027a23",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827620,
+              "key": "4d0180c2-73c1-4830-88a5-d899e4b98a78",
+              "title": "L3 05 04 Diagnosing Errors Part 2 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "YyuiRhIIFek",
+                "china_cdn_id": "YyuiRhIIFek.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701966,
+          "key": "0d8f551f-7c94-4e4c-a486-e0aa94634684",
+          "title": "Diagnosing Errors Part 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0d8f551f-7c94-4e4c-a486-e0aa94634684",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827621,
+              "key": "5809e517-b999-43a1-b1da-c66cbb223407",
+              "title": "L3 05 06 Diagnosing Errors Part 3 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "TqiOgyTkoFs",
+                "china_cdn_id": "TqiOgyTkoFs.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701968,
+          "key": "05c0026e-d550-424d-a30f-9749eb5f971e",
+          "title": "Optimization Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "05c0026e-d550-424d-a30f-9749eb5f971e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827622,
+              "key": "56742c94-1ab8-4baf-aef6-c11fb981bd40",
+              "title": "L3 06 01 Code Optimization Intro V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "GdXRUYzG9Vw",
+                "china_cdn_id": "GdXRUYzG9Vw.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701970,
+          "key": "cac10bff-d08e-4601-b6e0-9be35b868a29",
+          "title": "Understanding Data Skew",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cac10bff-d08e-4601-b6e0-9be35b868a29",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827624,
+              "key": "b9f73528-3e8f-490d-a2fb-a1e4501ec863",
+              "title": "L3 06 03 Understanding Data Skew V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "QRAtQqWf-Ys",
+                "china_cdn_id": "QRAtQqWf-Ys.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701972,
+          "key": "a1eb75e3-2af8-492c-8cd0-c0bcc0dc637b",
+          "title": "Understanding Big O Complexity",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a1eb75e3-2af8-492c-8cd0-c0bcc0dc637b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827626,
+              "key": "7cbd4598-d554-4bfe-a96f-8e9676622380",
+              "title": "L3 06 05 Understanding Big O Complexity V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "raAHcB6RZOM",
+                "china_cdn_id": "raAHcB6RZOM.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701976,
+          "key": "0b05ebaa-34bf-4caf-8b90-d3a50b0f2ded",
+          "title": "Other Issues and How to Address Them",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0b05ebaa-34bf-4caf-8b90-d3a50b0f2ded",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 900198,
+              "key": "81db4272-6f1c-437a-b9ee-2799197d5411",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In this lesson, we walked through various examples of issues you can debug based on error messages, loglines and stack traces. \n\nWe have also touched on another very common issue with Spark jobs that can be harder to address: everything working fine but just taking a very long time. So what do you do when your Spark job is (too) slow?\n\n#### Insufficient resources\n\nOften while there are some possible ways of improvement, processing large data sets just takes a lot longer time than smaller ones even without any big problem in the code or job tuning. Using more resources, either by increasing the number of executors or using more powerful machines, might just not be possible. \nWhen you have a slow job it’s useful to understand \n* how much data you’re actually processing (compressed file formats can be tricky to interpret), \n* if you can decrease the amount of data to be processed by filtering or aggregating to lower cardinality,\n* and if resource utilization is reasonable.\n\nThere are many cases where different stages of a Spark job differ greatly in their resource needs: loading data is typically I/O heavy, some stages might require a lot of memory, others might need a lot of CPU. Understanding these differences might help to optimize the overall performance. Use the Spark UI and logs to collect information on these metrics.\n\nIf you run into out of memory errors you might consider increasing the number of partitions. If the memory errors occur over time you can look into why the size of certain objects is increasing too much during the run and if the size can be contained. Also, look for ways of freeing up resources if garbage collection metrics are high.\n\nCertain algorithms (especially ML ones) use the driver to store data the workers share and update during the run. If you see memory issues on the driver check if the algorithm you’re using is pushing too much data there.\n\n#### Data skew\n\nIf you drill down on the Spark UI to the task level you can see if certain partitions process significantly more data than others and if they are lagging behind. Such symptoms usually indicate a skewed data set. Consider implementing the techniques mentioned in this lesson:\n* add an intermediate data processing step with an alternative key\n* adjust the spark.sql.shuffle.partitions parameter if necessary\n\nThe problem with data skew is that it’s very specific to a data set. You might know ahead of time that certain customers or accounts are expected to generate a lot more activity but the solution for dealing with the skew might strongly depend on how the data looks like. If you need to implement a more general solution (for example for an automated pipeline) it’s recommended to take a more conservative approach (so assume that your data will be skewed) and then monitor how bad the skew really is.\n\n#### Inefficient queries\n\nOnce your Spark application works it’s worth spending some time to analyze the query it runs. You can use the Spark UI to check the DAG and the jobs and stages it’s built of.\n\nSpark’s query optimizer is called Catalyst. While Catalyst is a powerful tool to turn Python code to an optimized query plan that can run on the JVM it has some limitations when optimizing your code. It will for example push filters in a particular stage as early as possible in the plan but won’t move a filter across stages. It’s your job to make sure that if early filtering is possible without compromising the business logic than you perform this filtering where it’s more appropriate.\n\nIt also can’t decide for you how much data you’re shuffling across the cluster. Remember from the first lesson how expensive sending data through the network is. As much as possible try to avoid shuffling unnecessary data. In practice, this means that you need to perform joins and grouped aggregations as late as possible. \n\nWhen it comes to joins there is more than one strategy to choose from. If one of your data frames are small consider using broadcast hash join instead of a hash join.\n\n#### Further reading\n\nDebugging and tuning your Spark application can be a daunting task. There is an ever growing community out there though always sharing new ideas and working on improving Spark itself and tooling that makes using Spark easier. So if you have a complicated issue don’t hesitate to reach out to others (via user mailing lists, forums, and Q&A sites).\n\nYou can find more information on tuning [Spark](https://spark.apache.org/docs/latest/tuning.html\n) and [Spark SQL](https://spark.apache.org/docs/latest/sql-performance-tuning.html\n)  in the documentation.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 701977,
+          "key": "f49e98a8-46f6-458e-80a9-b01b928d19bc",
+          "title": "Lesson Summary",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f49e98a8-46f6-458e-80a9-b01b928d19bc",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 827628,
+              "key": "fd52dffe-c51d-4abc-9cb9-007d8b075ef5",
+              "title": "L3 08 01 Lesson Outro V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "nCZReip9DpA",
+                "china_cdn_id": "nCZReip9DpA.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1721 @@
+{
+  "data": {
+    "course": {
+      "id": 469169,
+      "key": "ud2002",
+      "version": "1.0.0",
+      "locale": "en-us",
+      "semantic_type": "Course",
+      "forum_path": "",
+      "title": "Spark",
+      "is_public": true,
+      "is_default": true,
+      "user_state": {
+        "node_key": "ud2002",
+        "completed_at": "2020-03-29T01:44:11.281Z",
+        "last_viewed_at": "2020-03-29T07:25:01.476Z",
+        "unstructured": null
+      },
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/ud2002/469169/1563236291532/Spark+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/ud2002/469169/1563236279586/Spark+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "instructors": [],
+      "project_deadline": null,
+      "project": null,
+      "aggregated_state": {
+        "node_key": "ud2002",
+        "completion_amount": 0.009708737864077669,
+        "completed_count": 1,
+        "concept_count": 103,
+        "last_viewed_child_key": "c81d2f18-9bb4-428d-8724-33bfd0036fff",
+        "lesson_aggregated_states": [
+          {
+            "node_key": "c81d2f18-9bb4-428d-8724-33bfd0036fff",
+            "completed_at": null,
+            "completion_amount": 0.25,
+            "completed_count": 1,
+            "concept_count": 4,
+            "last_viewed_child_key": "9d138215-4f27-41de-a76e-86e7a3ad33ab"
+          },
+          {
+            "node_key": "154f3b0f-3504-4876-8916-6ffeb24a372e",
+            "completed_at": null,
+            "completion_amount": 0,
+            "completed_count": 0,
+            "concept_count": 18,
+            "last_viewed_child_key": "2d9b0183-d4da-4e69-b94e-7205be11c52d"
+          },
+          {
+            "node_key": "03c444d3-6216-432b-bc2c-bca4d20dfd26",
+            "completed_at": null,
+            "completion_amount": 0,
+            "completed_count": 0,
+            "concept_count": 28,
+            "last_viewed_child_key": "1abb865e-585d-4139-a7c9-7bba7512e44a"
+          },
+          {
+            "node_key": "4ad83923-fb08-49f1-8372-3e4bcb19d0d3",
+            "completed_at": null,
+            "completion_amount": 0,
+            "completed_count": 0,
+            "concept_count": 31,
+            "last_viewed_child_key": "87e42054-edf3-4e19-b352-351f6753e5a3"
+          },
+          {
+            "node_key": "e58f7601-b39a-4074-94e5-3cd5a1c9e3c6",
+            "completed_at": null,
+            "completion_amount": 0,
+            "completed_count": 0,
+            "concept_count": 22,
+            "last_viewed_child_key": "b779eae4-c55d-4e0e-b032-aa9fcb33ca09"
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": 790939,
+          "key": "c81d2f18-9bb4-428d-8724-33bfd0036fff",
+          "version": "1.0.0",
+          "locale": "en-us",
+          "semantic_type": "Lesson",
+          "summary": "In this lesson, you will learn more about this course - what will be covered, and who you will be learning from - let's get started!",
+          "title": "Introduction to the Course",
+          "duration": 30,
+          "is_public": true,
+          "is_project_lesson": false,
+          "display_workspace_project_only": false,
+          "lesson_type": "Classroom",
+          "image": null,
+          "resources": {
+            "files": [
+              {
+                "name": "Videos Zip File",
+                "uri": "https://zips.udacity-data.com/c81d2f18-9bb4-428d-8724-33bfd0036fff/790939/1545026828026/Introduction+to+the+Course+Videos.zip"
+              },
+              {
+                "name": "Transcripts Zip File",
+                "uri": "https://zips.udacity-data.com/c81d2f18-9bb4-428d-8724-33bfd0036fff/790939/1545026823712/Introduction+to+the+Course+Subtitles.zip"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "concepts": [
+            {
+              "id": 476055,
+              "key": "9d138215-4f27-41de-a76e-86e7a3ad33ab",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Introduction",
+              "user_state": {
+                "node_key": "9d138215-4f27-41de-a76e-86e7a3ad33ab",
+                "completed_at": "2020-03-29T06:51:40.816Z",
+                "last_viewed_at": "2020-03-29T07:25:01.839Z",
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 476057,
+              "key": "a3cf625d-d6c6-4824-a46d-2e1843a5aede",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Who Are Your Instructors?",
+              "user_state": {
+                "node_key": "a3cf625d-d6c6-4824-a46d-2e1843a5aede",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 476059,
+              "key": "b2867053-f71e-4dbb-b987-7389211ac538",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Course Overview",
+              "user_state": {
+                "node_key": "b2867053-f71e-4dbb-b987-7389211ac538",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 760078,
+              "key": "1e405ab4-e7d4-44a4-841a-f555df9850fa",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Project Overview",
+              "user_state": {
+                "node_key": "1e405ab4-e7d4-44a4-841a-f555df9850fa",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            }
+          ],
+          "project": null
+        },
+        {
+          "id": 790933,
+          "key": "154f3b0f-3504-4876-8916-6ffeb24a372e",
+          "version": "1.0.0",
+          "locale": "en-us",
+          "semantic_type": "Lesson",
+          "summary": "In this lesson, you will learn about the problems that Apache Spark is designed to solve. You'll also learn about the greater Big Data ecosystem and how Spark fits into it.",
+          "title": "The Power of Spark",
+          "duration": 90,
+          "is_public": true,
+          "is_project_lesson": false,
+          "display_workspace_project_only": false,
+          "lesson_type": "Classroom",
+          "image": {
+            "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2019/April/5cabb4f7_screen-shot-2019-04-08-at-1.54.04-pm/screen-shot-2019-04-08-at-1.54.04-pm.png",
+            "width": 356,
+            "height": 366
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Videos Zip File",
+                "uri": "https://zips.udacity-data.com/154f3b0f-3504-4876-8916-6ffeb24a372e/790933/1573514995110/The+Power+of+Spark+Videos.zip"
+              },
+              {
+                "name": "Transcripts Zip File",
+                "uri": "https://zips.udacity-data.com/154f3b0f-3504-4876-8916-6ffeb24a372e/790933/1573514990258/The+Power+of+Spark+Subtitles.zip"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "concepts": [
+            {
+              "id": 475943,
+              "key": "2d9b0183-d4da-4e69-b94e-7205be11c52d",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Introduction",
+              "user_state": {
+                "node_key": "2d9b0183-d4da-4e69-b94e-7205be11c52d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 475945,
+              "key": "ab1dbe1d-3c7c-4caf-b27d-9b1fdd80fd3d",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "What is Big Data?",
+              "user_state": {
+                "node_key": "ab1dbe1d-3c7c-4caf-b27d-9b1fdd80fd3d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 475948,
+              "key": "da4daf02-264c-4372-a7a7-0c78bc3952eb",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Numbers Everyone Should Know",
+              "user_state": {
+                "node_key": "da4daf02-264c-4372-a7a7-0c78bc3952eb",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 527850,
+              "key": "8425cb83-f8c3-4ec0-a1fb-63c2b6a69d17",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Hardware: CPU",
+              "user_state": {
+                "node_key": "8425cb83-f8c3-4ec0-a1fb-63c2b6a69d17",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 527881,
+              "key": "3313759c-8725-4b09-9bd1-3d6731163559",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Hardware: Memory",
+              "user_state": {
+                "node_key": "3313759c-8725-4b09-9bd1-3d6731163559",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 476039,
+              "key": "0e11805a-4f2d-45fb-a068-12101a2b9045",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Hardware: Storage",
+              "user_state": {
+                "node_key": "0e11805a-4f2d-45fb-a068-12101a2b9045",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 476041,
+              "key": "dd98569d-4642-4ba2-a3aa-9153cc8ace63",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Hardware: Network ",
+              "user_state": {
+                "node_key": "dd98569d-4642-4ba2-a3aa-9153cc8ace63",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 476043,
+              "key": "cf88b362-f6ed-4ed6-a969-5dd27a13cc20",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Hardware: Key Ratios",
+              "user_state": {
+                "node_key": "cf88b362-f6ed-4ed6-a969-5dd27a13cc20",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 476086,
+              "key": "85c48454-4299-453d-8ecf-fdb8bd3c02b9",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Small Data Numbers",
+              "user_state": {
+                "node_key": "85c48454-4299-453d-8ecf-fdb8bd3c02b9",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 476088,
+              "key": "5f7dad68-1b5e-480e-9424-93ef1e883303",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Big Data Numbers",
+              "user_state": {
+                "node_key": "5f7dad68-1b5e-480e-9424-93ef1e883303",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 476090,
+              "key": "44685991-59d1-4ebb-bfaa-b5b18a644b70",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Medium Data Numbers",
+              "user_state": {
+                "node_key": "44685991-59d1-4ebb-bfaa-b5b18a644b70",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 476099,
+              "key": "54038ace-c78e-4774-817d-4ca17e4bef21",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "History of Distributed Computing",
+              "user_state": {
+                "node_key": "54038ace-c78e-4774-817d-4ca17e4bef21",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 476102,
+              "key": "30000fe9-e616-43c6-8693-ce8642134429",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "The Hadoop Ecosystem",
+              "user_state": {
+                "node_key": "30000fe9-e616-43c6-8693-ce8642134429",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 476104,
+              "key": "8f702761-1c16-4ec6-90d3-292d3196ab0e",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "MapReduce",
+              "user_state": {
+                "node_key": "8f702761-1c16-4ec6-90d3-292d3196ab0e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 760125,
+              "key": "ed071b31-01b7-4041-b8be-c393c1baaadb",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Hadoop MapReduce [Demo]",
+              "user_state": {
+                "node_key": "ed071b31-01b7-4041-b8be-c393c1baaadb",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 476107,
+              "key": "ce0fba14-8794-402a-9703-f84b8cb93af3",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "The Spark Cluster",
+              "user_state": {
+                "node_key": "ce0fba14-8794-402a-9703-f84b8cb93af3",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 476109,
+              "key": "49ac7e52-1d08-4661-9b33-7e1c43b877a4",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Spark Use Cases",
+              "user_state": {
+                "node_key": "49ac7e52-1d08-4661-9b33-7e1c43b877a4",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 476137,
+              "key": "1b487566-a510-44b5-a71e-1fe2f758785a",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Summary",
+              "user_state": {
+                "node_key": "1b487566-a510-44b5-a71e-1fe2f758785a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            }
+          ],
+          "project": null
+        },
+        {
+          "id": 790934,
+          "key": "03c444d3-6216-432b-bc2c-bca4d20dfd26",
+          "version": "1.0.0",
+          "locale": "en-us",
+          "semantic_type": "Lesson",
+          "summary": "In this lesson, we'll dive into how to use Spark for cleaning and aggregating data.",
+          "title": "Data Wrangling with Spark",
+          "duration": 90,
+          "is_public": true,
+          "is_project_lesson": false,
+          "display_workspace_project_only": false,
+          "lesson_type": "Classroom",
+          "image": {
+            "url": "https://video.udacity-data.com/topher/2019/April/5cc83650_1-2-the-life-of-a-data-analyst2x/1-2-the-life-of-a-data-analyst2x.jpg",
+            "width": 500,
+            "height": 500
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Videos Zip File",
+                "uri": "https://zips.udacity-data.com/03c444d3-6216-432b-bc2c-bca4d20dfd26/790934/1573515012086/Data+Wrangling+with+Spark+Videos.zip"
+              },
+              {
+                "name": "Transcripts Zip File",
+                "uri": "https://zips.udacity-data.com/03c444d3-6216-432b-bc2c-bca4d20dfd26/790934/1573515006965/Data+Wrangling+with+Spark+Subtitles.zip"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "concepts": [
+            {
+              "id": 634525,
+              "key": "1abb865e-585d-4139-a7c9-7bba7512e44a",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Introduction",
+              "user_state": {
+                "node_key": "1abb865e-585d-4139-a7c9-7bba7512e44a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 634526,
+              "key": "c7f229c9-b575-4e66-9e65-1b1f035f61a0",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Functional Programming",
+              "user_state": {
+                "node_key": "c7f229c9-b575-4e66-9e65-1b1f035f61a0",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 634527,
+              "key": "6dfae7ce-1e9c-4b45-8f0f-8dfd451391ed",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Why Use Functional Programming",
+              "user_state": {
+                "node_key": "6dfae7ce-1e9c-4b45-8f0f-8dfd451391ed",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 666140,
+              "key": "efc90b27-f14f-4314-b0a0-6f8a992ce1dc",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Procedural Example",
+              "user_state": {
+                "node_key": "efc90b27-f14f-4314-b0a0-6f8a992ce1dc",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 777857,
+              "key": "f91bb65a-18d2-4041-b462-bf0d234e1b85",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Procedural [Example Code]",
+              "user_state": {
+                "node_key": "f91bb65a-18d2-4041-b462-bf0d234e1b85",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 698575,
+              "key": "abbf4802-529b-497d-908b-16447e44e2ec",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Pure Functions in the Bread Factory",
+              "user_state": {
+                "node_key": "abbf4802-529b-497d-908b-16447e44e2ec",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701877,
+              "key": "d0a41723-9ba9-4959-836f-30f39cd12d47",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "The Spark DAGs: Recipe for Data",
+              "user_state": {
+                "node_key": "d0a41723-9ba9-4959-836f-30f39cd12d47",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 778202,
+              "key": "e1846cb5-6307-46b8-b693-bbc1c727a773",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Maps and Lambda Functions",
+              "user_state": {
+                "node_key": "e1846cb5-6307-46b8-b693-bbc1c727a773",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701882,
+              "key": "d4f8c589-881d-455b-85c2-c38d2ea93fbd",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Maps and Lambda Functions [Example Code]",
+              "user_state": {
+                "node_key": "d4f8c589-881d-455b-85c2-c38d2ea93fbd",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701883,
+              "key": "745c8c29-6667-414e-9991-42f3fa448445",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Data Formats",
+              "user_state": {
+                "node_key": "745c8c29-6667-414e-9991-42f3fa448445",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 664563,
+              "key": "1de03338-6941-4dee-bcfe-a6cdf239197c",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Distributed Data Stores",
+              "user_state": {
+                "node_key": "1de03338-6941-4dee-bcfe-a6cdf239197c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 664573,
+              "key": "cc173c72-f22c-4726-9670-1da856b9598b",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "SparkSession",
+              "user_state": {
+                "node_key": "cc173c72-f22c-4726-9670-1da856b9598b",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 664581,
+              "key": "e986c351-9b8d-4cca-ac9c-071dfc5ee59b",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Reading and Writing Data into Spark Data Frames",
+              "user_state": {
+                "node_key": "e986c351-9b8d-4cca-ac9c-071dfc5ee59b",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 778211,
+              "key": "ab26506e-9cdd-4c19-b35a-b190e33d6b70",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Read and Write Data into Spark Data Frames [example code]",
+              "user_state": {
+                "node_key": "ab26506e-9cdd-4c19-b35a-b190e33d6b70",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 664567,
+              "key": "ebecdf88-f1f2-47e7-a531-b3119d1e5980",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Imperative vs Declarative programming ",
+              "user_state": {
+                "node_key": "ebecdf88-f1f2-47e7-a531-b3119d1e5980",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 664591,
+              "key": "cf89a74d-32bb-4097-a99f-e3fa52aa5999",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Data Wrangling with DataFrames",
+              "user_state": {
+                "node_key": "cf89a74d-32bb-4097-a99f-e3fa52aa5999",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 666137,
+              "key": "3c540fdb-6c0f-40df-9686-be3aea83ba20",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Data Wrangling with DataFrames Extra Tips",
+              "user_state": {
+                "node_key": "3c540fdb-6c0f-40df-9686-be3aea83ba20",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 778241,
+              "key": "02cfa30e-9e3b-4173-a074-2c53234f4216",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Data Wrangling with Spark [Example Code]",
+              "user_state": {
+                "node_key": "02cfa30e-9e3b-4173-a074-2c53234f4216",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 666133,
+              "key": "feaf7659-1fab-460e-93ad-d19c0d863d1a",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Quiz - Data Wrangling with DataFrames",
+              "user_state": {
+                "node_key": "feaf7659-1fab-460e-93ad-d19c0d863d1a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 778296,
+              "key": "ded49d0f-d31c-4338-8180-812c273d0cdb",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Quiz - Data Wrangling with DataFrames Jupyter Notebook",
+              "user_state": {
+                "node_key": "ded49d0f-d31c-4338-8180-812c273d0cdb",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 778297,
+              "key": "79b6e174-d26d-4356-b3dd-6a93afafdbb9",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Quiz [Solution Code]",
+              "user_state": {
+                "node_key": "79b6e174-d26d-4356-b3dd-6a93afafdbb9",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 664565,
+              "key": "8f7b98a0-2951-4f98-9af8-fceb80aee1d3",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Spark SQL",
+              "user_state": {
+                "node_key": "8f7b98a0-2951-4f98-9af8-fceb80aee1d3",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701889,
+              "key": "1d50da39-e216-4d47-83fe-e1869e7c6ba1",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Example Spark SQL",
+              "user_state": {
+                "node_key": "1d50da39-e216-4d47-83fe-e1869e7c6ba1",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 778316,
+              "key": "78ac15d5-d33f-42fe-8606-b79ca430f78f",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Example Spark SQL [Example Code]",
+              "user_state": {
+                "node_key": "78ac15d5-d33f-42fe-8606-b79ca430f78f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 783161,
+              "key": "6f14f4c1-1180-44a7-ae5e-cbe2fcbcb1c2",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Quiz - Data Wrangling with SparkSQL",
+              "user_state": {
+                "node_key": "6f14f4c1-1180-44a7-ae5e-cbe2fcbcb1c2",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 783162,
+              "key": "e703f510-e90a-4ced-b427-ef7bd29195cc",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Quiz [Spark SQL Solution Code]",
+              "user_state": {
+                "node_key": "e703f510-e90a-4ced-b427-ef7bd29195cc",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 664576,
+              "key": "6af0e3f8-513d-4b76-affe-78ebd61f110d",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "RDDs",
+              "user_state": {
+                "node_key": "6af0e3f8-513d-4b76-affe-78ebd61f110d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 664578,
+              "key": "a8c47fac-9ef7-4aa0-aaf9-eb8165f8065d",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Summary",
+              "user_state": {
+                "node_key": "a8c47fac-9ef7-4aa0-aaf9-eb8165f8065d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            }
+          ],
+          "project": null
+        },
+        {
+          "id": 790935,
+          "key": "4ad83923-fb08-49f1-8372-3e4bcb19d0d3",
+          "version": "1.0.0",
+          "locale": "en-us",
+          "semantic_type": "Lesson",
+          "summary": "In this lesson, you will learn to run Spark on a distributed cluster in AWS, and learn best practices for debugging and optimizing your Spark applications. ",
+          "title": "Debugging and Optimization",
+          "duration": 90,
+          "is_public": true,
+          "is_project_lesson": false,
+          "display_workspace_project_only": false,
+          "lesson_type": "Classroom",
+          "image": {
+            "url": "https://video.udacity-data.com/topher/2018/January/5a4dec79_3-9-deep-debugging-copy2x/3-9-deep-debugging-copy2x.jpg",
+            "width": 592,
+            "height": 640
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Videos Zip File",
+                "uri": "https://zips.udacity-data.com/4ad83923-fb08-49f1-8372-3e4bcb19d0d3/790935/1563236248335/Debugging+and+Optimization+Videos.zip"
+              },
+              {
+                "name": "Transcripts Zip File",
+                "uri": "https://zips.udacity-data.com/4ad83923-fb08-49f1-8372-3e4bcb19d0d3/790935/1563236241894/Debugging+and+Optimization+Subtitles.zip"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "concepts": [
+            {
+              "id": 701904,
+              "key": "87e42054-edf3-4e19-b352-351f6753e5a3",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Introduction",
+              "user_state": {
+                "node_key": "87e42054-edf3-4e19-b352-351f6753e5a3",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701907,
+              "key": "9e906736-c5f7-45a6-b47a-e43e4c28dfa8",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "From Local to Standalone Mode",
+              "user_state": {
+                "node_key": "9e906736-c5f7-45a6-b47a-e43e4c28dfa8",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701906,
+              "key": "844a6db6-e033-4e84-a0f6-22f3d4b137d5",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Setup Instructions AWS ",
+              "user_state": {
+                "node_key": "844a6db6-e033-4e84-a0f6-22f3d4b137d5",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 947356,
+              "key": "c7e9b913-bcb9-4bc3-adca-e8685c0a3c02",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Using Notebooks on your Cluster",
+              "user_state": {
+                "node_key": "c7e9b913-bcb9-4bc3-adca-e8685c0a3c02",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701911,
+              "key": "e1e56c84-d0fd-462a-8ff0-e432ba2d5bef",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Spark Scripts",
+              "user_state": {
+                "node_key": "e1e56c84-d0fd-462a-8ff0-e432ba2d5bef",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 959984,
+              "key": "832722ba-3ff8-4917-9f26-459c4f859ce2",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Demo: Connecting to your Cluster",
+              "user_state": {
+                "node_key": "832722ba-3ff8-4917-9f26-459c4f859ce2",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701916,
+              "key": "7972a421-94b0-4e21-85e2-9726372cfbae",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Submitting Spark Scripts",
+              "user_state": {
+                "node_key": "7972a421-94b0-4e21-85e2-9726372cfbae",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701917,
+              "key": "bd543066-c3eb-4d40-bc43-6934f634a0af",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Storing and Retrieving Data on the Cloud",
+              "user_state": {
+                "node_key": "bd543066-c3eb-4d40-bc43-6934f634a0af",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701924,
+              "key": "9f1e6bf0-78ec-43d1-bea5-df8d3fafc006",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Reading and Writing to Amazon S3 ",
+              "user_state": {
+                "node_key": "9f1e6bf0-78ec-43d1-bea5-df8d3fafc006",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701925,
+              "key": "22a088f7-536d-4606-b162-f4533e73d9c6",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Introduction to HDFS",
+              "user_state": {
+                "node_key": "22a088f7-536d-4606-b162-f4533e73d9c6",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701926,
+              "key": "580f218e-e518-4294-8d12-1dae02a8e128",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Reading and Writing Data to HDFS",
+              "user_state": {
+                "node_key": "580f218e-e518-4294-8d12-1dae02a8e128",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701928,
+              "key": "dfc84e23-3ba1-4b66-a0eb-be5d4d570f8b",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Recap Local Mode to Cluster Mode",
+              "user_state": {
+                "node_key": "dfc84e23-3ba1-4b66-a0eb-be5d4d570f8b",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701929,
+              "key": "9cbd06af-fc68-4127-a0d2-b8b0bde6bbc4",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Debugging is Hard",
+              "user_state": {
+                "node_key": "9cbd06af-fc68-4127-a0d2-b8b0bde6bbc4",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701931,
+              "key": "0c1adea3-44e0-4b36-8f1e-1b2c836df293",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Syntax Errors",
+              "user_state": {
+                "node_key": "0c1adea3-44e0-4b36-8f1e-1b2c836df293",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701932,
+              "key": "66cc68a2-8f38-4125-89a3-7ebfdec0d9cb",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Code Errors",
+              "user_state": {
+                "node_key": "66cc68a2-8f38-4125-89a3-7ebfdec0d9cb",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701933,
+              "key": "09b57937-9d56-4a80-90d6-db3535ec7a5f",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Data Errors",
+              "user_state": {
+                "node_key": "09b57937-9d56-4a80-90d6-db3535ec7a5f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701934,
+              "key": "c2c1a43e-9b63-4d84-b391-859f31ffc51a",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Demo: Data Errors",
+              "user_state": {
+                "node_key": "c2c1a43e-9b63-4d84-b391-859f31ffc51a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701936,
+              "key": "7a4de2b3-f54f-41a6-a2df-a7cd56d22718",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Debugging your Code",
+              "user_state": {
+                "node_key": "7a4de2b3-f54f-41a6-a2df-a7cd56d22718",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701938,
+              "key": "cdf6559f-c799-4b66-a9e0-28c417cbf9da",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "How to Use Accumulators",
+              "user_state": {
+                "node_key": "cdf6559f-c799-4b66-a9e0-28c417cbf9da",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701940,
+              "key": "863eb5a3-59e7-4aae-9f81-dd8b35765945",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Spark WebUI",
+              "user_state": {
+                "node_key": "863eb5a3-59e7-4aae-9f81-dd8b35765945",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701942,
+              "key": "50d57a17-5e5d-41a1-a9fc-b7f6e3236eb1",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Connecting to the Spark Web UI",
+              "user_state": {
+                "node_key": "50d57a17-5e5d-41a1-a9fc-b7f6e3236eb1",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701943,
+              "key": "20a54a1c-ccad-4bb0-ab5c-8cdb5fc16c03",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Getting Familiar with the Spark UI",
+              "user_state": {
+                "node_key": "20a54a1c-ccad-4bb0-ab5c-8cdb5fc16c03",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701962,
+              "key": "ffe31174-b969-4f92-b875-f94e61a1dbd7",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Review of the Log Data",
+              "user_state": {
+                "node_key": "ffe31174-b969-4f92-b875-f94e61a1dbd7",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701963,
+              "key": "3a79e71b-328e-43c0-8406-c862260023ae",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Diagnosing Errors Part I",
+              "user_state": {
+                "node_key": "3a79e71b-328e-43c0-8406-c862260023ae",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701964,
+              "key": "098116ad-ed37-4427-8043-0fcec8027a23",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Diagnosing Errors Part 2",
+              "user_state": {
+                "node_key": "098116ad-ed37-4427-8043-0fcec8027a23",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701966,
+              "key": "0d8f551f-7c94-4e4c-a486-e0aa94634684",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Diagnosing Errors Part 3",
+              "user_state": {
+                "node_key": "0d8f551f-7c94-4e4c-a486-e0aa94634684",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701968,
+              "key": "05c0026e-d550-424d-a30f-9749eb5f971e",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Optimization Introduction",
+              "user_state": {
+                "node_key": "05c0026e-d550-424d-a30f-9749eb5f971e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701970,
+              "key": "cac10bff-d08e-4601-b6e0-9be35b868a29",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Understanding Data Skew",
+              "user_state": {
+                "node_key": "cac10bff-d08e-4601-b6e0-9be35b868a29",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701972,
+              "key": "a1eb75e3-2af8-492c-8cd0-c0bcc0dc637b",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Understanding Big O Complexity",
+              "user_state": {
+                "node_key": "a1eb75e3-2af8-492c-8cd0-c0bcc0dc637b",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701976,
+              "key": "0b05ebaa-34bf-4caf-8b90-d3a50b0f2ded",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Other Issues and How to Address Them",
+              "user_state": {
+                "node_key": "0b05ebaa-34bf-4caf-8b90-d3a50b0f2ded",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 701977,
+              "key": "f49e98a8-46f6-458e-80a9-b01b928d19bc",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Lesson Summary",
+              "user_state": {
+                "node_key": "f49e98a8-46f6-458e-80a9-b01b928d19bc",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            }
+          ],
+          "project": null
+        },
+        {
+          "id": 790936,
+          "key": "e58f7601-b39a-4074-94e5-3cd5a1c9e3c6",
+          "version": "1.0.0",
+          "locale": "en-us",
+          "semantic_type": "Lesson",
+          "summary": "In this lesson, we'll explore Spark's ML capabilities and build ML models and pipelines.",
+          "title": "Machine Learning with Spark",
+          "duration": 120,
+          "is_public": true,
+          "is_project_lesson": false,
+          "display_workspace_project_only": false,
+          "lesson_type": "Classroom",
+          "image": null,
+          "resources": {
+            "files": [
+              {
+                "name": "Videos Zip File",
+                "uri": "https://zips.udacity-data.com/e58f7601-b39a-4074-94e5-3cd5a1c9e3c6/790936/1545026817774/Machine+Learning+with+Spark+Videos.zip"
+              },
+              {
+                "name": "Transcripts Zip File",
+                "uri": "https://zips.udacity-data.com/e58f7601-b39a-4074-94e5-3cd5a1c9e3c6/790936/1545026814606/Machine+Learning+with+Spark+Subtitles.zip"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "concepts": [
+            {
+              "id": 669287,
+              "key": "b779eae4-c55d-4e0e-b032-aa9fcb33ca09",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Introduction",
+              "user_state": {
+                "node_key": "b779eae4-c55d-4e0e-b032-aa9fcb33ca09",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 669288,
+              "key": "50b5bc12-e865-4bc7-8663-aff237b154fb",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Machine Learning in Spark",
+              "user_state": {
+                "node_key": "50b5bc12-e865-4bc7-8663-aff237b154fb",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 669289,
+              "key": "13a837f3-cea3-408c-a1fd-c5679fb86c29",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Feature Extraction",
+              "user_state": {
+                "node_key": "13a837f3-cea3-408c-a1fd-c5679fb86c29",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 669315,
+              "key": "c0c734fd-d794-4778-ad0a-6a9c5dc040a0",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Numeric Features",
+              "user_state": {
+                "node_key": "c0c734fd-d794-4778-ad0a-6a9c5dc040a0",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 784462,
+              "key": "ac577054-a835-4e2d-8975-bca5fa12a37c",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Numeric Features [Example Code]",
+              "user_state": {
+                "node_key": "ac577054-a835-4e2d-8975-bca5fa12a37c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 669309,
+              "key": "8f38852d-bff4-41e5-970a-04bca1fdd4dd",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Text Processing",
+              "user_state": {
+                "node_key": "8f38852d-bff4-41e5-970a-04bca1fdd4dd",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 785541,
+              "key": "d56112a0-a519-4ce1-a2b5-4a6be8049114",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Text Processing [Example Code]",
+              "user_state": {
+                "node_key": "d56112a0-a519-4ce1-a2b5-4a6be8049114",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 682587,
+              "key": "ec0e699f-220b-43d4-a437-6e84ea5bceb8",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Quiz - Creating Features",
+              "user_state": {
+                "node_key": "ec0e699f-220b-43d4-a437-6e84ea5bceb8",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 785543,
+              "key": "b2c32ee4-e42d-42f0-a0d5-42a8db1081c6",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Quiz - Creating Features [Workspace]",
+              "user_state": {
+                "node_key": "b2c32ee4-e42d-42f0-a0d5-42a8db1081c6",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 669321,
+              "key": "b36a15c4-a9ac-4fed-8e41-76fdfe74ec89",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Dimensionality Reduction",
+              "user_state": {
+                "node_key": "b36a15c4-a9ac-4fed-8e41-76fdfe74ec89",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 669292,
+              "key": "9b1f807f-adcc-4970-84c7-7ad13abf1f77",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Supervised ML Algorithms",
+              "user_state": {
+                "node_key": "9b1f807f-adcc-4970-84c7-7ad13abf1f77",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 669330,
+              "key": "c87acb91-b4a4-4564-8a7f-f85b9744f306",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Linear Regression",
+              "user_state": {
+                "node_key": "c87acb91-b4a4-4564-8a7f-f85b9744f306",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 689807,
+              "key": "f3a82400-cd54-4015-9d1a-9e7fd6bfcf87",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Linear Regression",
+              "user_state": {
+                "node_key": "f3a82400-cd54-4015-9d1a-9e7fd6bfcf87",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 669331,
+              "key": "f8978667-6294-434d-82d4-555e0815a00e",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Logistic Regression",
+              "user_state": {
+                "node_key": "f8978667-6294-434d-82d4-555e0815a00e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 669293,
+              "key": "4c882cde-7c5e-4ecc-9ea0-f4f7456d18e5",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Unsupervised ML Algorithms",
+              "user_state": {
+                "node_key": "4c882cde-7c5e-4ecc-9ea0-f4f7456d18e5",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 689800,
+              "key": "ff92e6c7-1977-45c7-9882-d8d54d2075a8",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Quiz - K-means",
+              "user_state": {
+                "node_key": "ff92e6c7-1977-45c7-9882-d8d54d2075a8",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 669294,
+              "key": "5c0516d8-3bbb-4bd6-954a-89af2e48c6f5",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "ML Pipelines",
+              "user_state": {
+                "node_key": "5c0516d8-3bbb-4bd6-954a-89af2e48c6f5",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 669333,
+              "key": "7baaf3ae-983a-495c-afcb-02a57021229e",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "ML Pipeline Example",
+              "user_state": {
+                "node_key": "7baaf3ae-983a-495c-afcb-02a57021229e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 669295,
+              "key": "9a5fb87b-9e12-4429-9682-167e4bde0aef",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Model Selection and Tuning",
+              "user_state": {
+                "node_key": "9a5fb87b-9e12-4429-9682-167e4bde0aef",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 669336,
+              "key": "c14e3c2e-077c-44d6-bf77-06f53f96c988",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Model Selection and Tuning Example",
+              "user_state": {
+                "node_key": "c14e3c2e-077c-44d6-bf77-06f53f96c988",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 689865,
+              "key": "9487c5cb-e613-4cd7-afb9-970a8c9bcb18",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Quiz - Model Tuning",
+              "user_state": {
+                "node_key": "9487c5cb-e613-4cd7-afb9-970a8c9bcb18",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            },
+            {
+              "id": 669296,
+              "key": "94953a35-b8af-445a-9af5-29781a244840",
+              "is_public": true,
+              "semantic_type": "Concept",
+              "title": "Summary",
+              "user_state": {
+                "node_key": "94953a35-b8af-445a-9af5-29781a244840",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "resources": null
+            }
+          ],
+          "project": null
+        }
+      ]
+    }
+  }
+}

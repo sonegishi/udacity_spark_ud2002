@@ -1,0 +1,1304 @@
+{
+  "data": {
+    "lesson": {
+      "id": 790934,
+      "key": "03c444d3-6216-432b-bc2c-bca4d20dfd26",
+      "title": "Data Wrangling with Spark",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "In this lesson, we'll dive into how to use Spark for cleaning and aggregating data.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/03c444d3-6216-432b-bc2c-bca4d20dfd26/790934/1573515012086/Data+Wrangling+with+Spark+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/03c444d3-6216-432b-bc2c-bca4d20dfd26/790934/1573515006965/Data+Wrangling+with+Spark+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 634525,
+          "key": "1abb865e-585d-4139-a7c9-7bba7512e44a",
+          "title": "Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1abb865e-585d-4139-a7c9-7bba7512e44a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 771344,
+              "key": "b94fbc68-1538-4eae-8734-e9840584a507",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Introduction",
+              "instructor_notes": ""
+            },
+            {
+              "id": 771328,
+              "key": "11904626-958a-48bc-a580-6c5e2c15c6d4",
+              "title": "L2 01 01 Lesson Overview V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "XWT2nkoy474",
+                "china_cdn_id": "XWT2nkoy474.mp4"
+              }
+            },
+            {
+              "id": 771362,
+              "key": "175fbf68-1ffe-4c59-abf4-497bc9f6d99c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In this lesson, you'll practice wrangling data with Spark. If you are familiar with both SQL and Python's pandas library, you'll notice quite a few similarities with the Spark SQL module and Spark Dataset API.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 771358,
+              "key": "50df17ab-4033-42e7-bbca-3b331c24aa8a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Lesson Overview\n* Wrangling data with Spark\n* Functional programming\n* Read in and write out data\n* Spark environment and Spark APIs\n* RDD API",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 634526,
+          "key": "c7f229c9-b575-4e66-9e65-1b1f035f61a0",
+          "title": "Functional Programming",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c7f229c9-b575-4e66-9e65-1b1f035f61a0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 771363,
+              "key": "3807ca4d-45e7-4de5-abec-99cd7adfdcd0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Manipulating Data Using Functional Programming",
+              "instructor_notes": ""
+            },
+            {
+              "id": 771364,
+              "key": "810b115d-6f6d-4f80-9c84-7f9f03411cee",
+              "title": "L2 02 01 Functional Programming V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ZTbFxpcvmSk",
+                "china_cdn_id": "ZTbFxpcvmSk.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 634527,
+          "key": "6dfae7ce-1e9c-4b45-8f0f-8dfd451391ed",
+          "title": "Why Use Functional Programming",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6dfae7ce-1e9c-4b45-8f0f-8dfd451391ed",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 771368,
+              "key": "01588b4c-4fc8-43b9-9fd1-13c9db3fd008",
+              "title": "L2 02 015 Why Use Funcitonal Programming V4",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "jSwfZ8wks_E",
+                "china_cdn_id": "jSwfZ8wks_E.mp4"
+              }
+            },
+            {
+              "id": 771556,
+              "key": "8102a37e-fd5e-4592-ad42-2c0119b5f9c9",
+              "title": "Functional programming",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "8102a37e-fd5e-4592-ad42-2c0119b5f9c9",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "In the video, David explains why Spark uses functional programming. He also implies that Python is not a functional programming language. How is it possible that Spark programs can be written in Python if Python is not a functional programming language? Mark all answers that are true.",
+                "answers": [
+                  {
+                    "id": "a1540929337007",
+                    "text": "You cannot write Spark programs in Python.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1540932351743",
+                    "text": "The PySpark API is written with functional programming principles in mind.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1540932352480",
+                    "text": "You can write Spark programs in Python using an API, but you need to be extra careful when writing Spark programs with the PySpark API because Python is an imperative language.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1540932353191",
+                    "text": "Spark is written in Scala. So the PySpark API first translates your code to Scala, which is a functional programming language. ",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 666140,
+          "key": "efc90b27-f14f-4314-b0a0-6f8a992ce1dc",
+          "title": "Procedural Example",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "efc90b27-f14f-4314-b0a0-6f8a992ce1dc",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 778200,
+              "key": "92384edc-bfe8-4d43-9b54-05de65ea007e",
+              "title": "2 02 SCPure Function Example V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "CJtXhcG3MLc",
+                "china_cdn_id": "CJtXhcG3MLc.mp4"
+              }
+            },
+            {
+              "id": 666141,
+              "key": "33a46268-2023-44ee-86fd-c3f3bcf0ec51",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "David - Screencast [2_02_SC-Pure_Function_Example]",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 777857,
+          "key": "f91bb65a-18d2-4041-b462-bf0d234e1b85",
+          "title": "Procedural [Example Code]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f91bb65a-18d2-4041-b462-bf0d234e1b85",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 777863,
+              "key": "1a54fc54-2382-4be6-a35e-85c1746e972f",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6pg2xik3c2",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-djrhh1fubed",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/1_procedural_vs_functional_in_python.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 698575,
+          "key": "abbf4802-529b-497d-908b-16447e44e2ec",
+          "title": "Pure Functions in the Bread Factory",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "abbf4802-529b-497d-908b-16447e44e2ec",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 777866,
+              "key": "0e35bb35-2147-463f-af5d-6078abea2649",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Pure Functions Analogy",
+              "instructor_notes": ""
+            },
+            {
+              "id": 777865,
+              "key": "568c4841-107f-4bfa-ba32-4d9f8b1b9119",
+              "title": "L2 02 03 Pure Funcitons In The Bread Factory V6",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "AHIGpJaAL1U",
+                "china_cdn_id": "AHIGpJaAL1U.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 701877,
+          "key": "d0a41723-9ba9-4959-836f-30f39cd12d47",
+          "title": "The Spark DAGs: Recipe for Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d0a41723-9ba9-4959-836f-30f39cd12d47",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 777896,
+              "key": "03443418-2cdd-4cec-9363-e66bd864af51",
+              "title": "L2 02 05 The Spark DAGs Recipe For Data WIP V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "lrgHpuIJxfM",
+                "china_cdn_id": "lrgHpuIJxfM.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 778202,
+          "key": "e1846cb5-6307-46b8-b693-bbc1c727a773",
+          "title": "Maps and Lambda Functions",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e1846cb5-6307-46b8-b693-bbc1c727a773",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 778205,
+              "key": "7764e0e9-ec29-4cd6-b84a-4f0d58cf8053",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Maps and Lambda Functions",
+              "instructor_notes": ""
+            },
+            {
+              "id": 778204,
+              "key": "60a95b48-c445-473c-ab70-1bc673f5a637",
+              "title": "2 06 SCMaps And Lambda Functions V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "cOWpvYouMA8",
+                "china_cdn_id": "cOWpvYouMA8.mp4"
+              }
+            },
+            {
+              "id": 778341,
+              "key": "0c4ce3ae-df22-48f9-9126-20adcc892383",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "For more about the theory and origins of lambda functions, take a look at this [blog post](http://palmstroem.blogspot.com/2012/05/lambda-calculus-for-absolute-dummies.html). Why are lambda functions called \"lambda\" functions? \n\nAccording to legend, the inventor of Lambda Calculus, Alonzo Church, originally used the wedge symbol  <span class=\"mathquill\"> \\wedge</span> as part of his notation. But the typsetter transcribing his manuscript used <span class=\"mathquill\"> \\lambda</span> instead. You can read more about it in the blog post.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 701882,
+          "key": "d4f8c589-881d-455b-85c2-c38d2ea93fbd",
+          "title": "Maps and Lambda Functions [Example Code]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d4f8c589-881d-455b-85c2-c38d2ea93fbd",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 777959,
+              "key": "89f28341-76da-4707-8fb6-cce0e53f8e22",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6pg2xik3c2",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-dkmnpetsii",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/2_spark_maps_and_lazy_evaluation.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 701883,
+          "key": "745c8c29-6667-414e-9991-42f3fa448445",
+          "title": "Data Formats",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "745c8c29-6667-414e-9991-42f3fa448445",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 777965,
+              "key": "1074699f-458a-4a06-a483-7fe786d1ecca",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Data Formats",
+              "instructor_notes": ""
+            },
+            {
+              "id": 777964,
+              "key": "3e22b920-81c4-4c93-b2f7-7f20694409d0",
+              "title": "L2 03 01 Data Formats V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "y-EE91w7Kf0",
+                "china_cdn_id": "y-EE91w7Kf0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 664563,
+          "key": "1de03338-6941-4dee-bcfe-a6cdf239197c",
+          "title": "Distributed Data Stores",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1de03338-6941-4dee-bcfe-a6cdf239197c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 784453,
+              "key": "6a3bc40d-3f4e-466f-8063-5c5ae64cf56f",
+              "title": "L2 03 03 Distrubted Data Stores V7",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "DYAErjfPONE",
+                "china_cdn_id": "DYAErjfPONE.mp4"
+              }
+            },
+            {
+              "id": 664585,
+              "key": "3f3951ac-e8e3-457e-aa92-7a838fb53111",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "You can find more information about [Amazon S3](https://aws.amazon.com/s3/) and [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html ) by following these links.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 664573,
+          "key": "cc173c72-f22c-4726-9670-1da856b9598b",
+          "title": "SparkSession",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cc173c72-f22c-4726-9670-1da856b9598b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 777983,
+              "key": "19f2aa28-7aa3-4b1c-8737-4ee635d3a571",
+              "title": "L2 03 04 SparkSession V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ZMSzkDG1BSQ",
+                "china_cdn_id": "ZMSzkDG1BSQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 664581,
+          "key": "e986c351-9b8d-4cca-ac9c-071dfc5ee59b",
+          "title": "Reading and Writing Data into Spark Data Frames",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e986c351-9b8d-4cca-ac9c-071dfc5ee59b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 778180,
+              "key": "45e2f733-e2d0-4e09-a8ad-9e3e567aa071",
+              "title": "Lesson2 Load Save Dataframe V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Mqs8e_TmHjM",
+                "china_cdn_id": "Mqs8e_TmHjM.mp4"
+              }
+            },
+            {
+              "id": 666151,
+              "key": "54697257-9d1d-4a57-950a-540bbf72e896",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "##### Tip\n\nIf Spark is used in a cluster mode all the worker nodes need to have access to the input data source. If you're trying to import a file saved only on the local disk of the driver node you'll receive an error message similar to this:\n\n`AnalysisException: u'Path does not exist: file:/home/ubuntu/test.csv;'`\n\nLoading the file should work if all the nodes have it saved under the same path.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 778211,
+          "key": "ab26506e-9cdd-4c19-b35a-b190e33d6b70",
+          "title": "Read and Write Data into Spark Data Frames [example code]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ab26506e-9cdd-4c19-b35a-b190e33d6b70",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 778215,
+              "key": "fd348ac7-0824-441a-9ed2-2ed0394a1497",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6pg2xik3c2",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-0wvlnohrq1j",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/3_data_inputs_and_outputs.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 664567,
+          "key": "ebecdf88-f1f2-47e7-a531-b3119d1e5980",
+          "title": "Imperative vs Declarative programming ",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ebecdf88-f1f2-47e7-a531-b3119d1e5980",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 783165,
+              "key": "e257381e-e061-4d87-9c07-ab36d30e247a",
+              "title": "L2 04 01 Imperative V Declarative Programming V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "gGIZvUu4H9U",
+                "china_cdn_id": "gGIZvUu4H9U.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 664591,
+          "key": "cf89a74d-32bb-4097-a99f-e3fa52aa5999",
+          "title": "Data Wrangling with DataFrames",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cf89a74d-32bb-4097-a99f-e3fa52aa5999",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 778240,
+              "key": "079848cf-d1a7-4854-a1cb-0b100225857e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Data Wrangling with Data Frames",
+              "instructor_notes": ""
+            },
+            {
+              "id": 666155,
+              "key": "a01af363-4d93-4c00-9769-bdfb14e1fde4",
+              "title": "Lesson2 Data Wrangling V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "pDOlgj0FBdU",
+                "china_cdn_id": "pDOlgj0FBdU.mp4"
+              }
+            },
+            {
+              "id": 778252,
+              "key": "3139fd5d-db61-40c0-be02-c686b119bd4c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "##### Correction\n\nYou might notice in the screencast code that the SparkSession object wasn't instantiated explicitly. This is because Judit was using the same environment from a previous exercise. In general, you would have to instantiate an object using code like this:\n```python\n\nspark = SparkSession \\\n    .builder \\\n    .appName(\"Wrangling Data\") \\\n    .getOrCreate()\n\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 666137,
+          "key": "3c540fdb-6c0f-40df-9686-be3aea83ba20",
+          "title": "Data Wrangling with DataFrames Extra Tips",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3c540fdb-6c0f-40df-9686-be3aea83ba20",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 666138,
+              "key": "0197e127-c0e0-49e1-b986-f61a29fd2da5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Functions\n\nIn the previous video, we've used a number of functions to manipulate our dataframe. Let's take a look at the different type of functions and their potential pitfalls.\n\n#### General functions\n\nWe have used the following general functions that are quite similar to methods of pandas dataframes:\n* `select()`: returns a new DataFrame with the selected columns\n* `filter()`: filters rows using the given condition\n* `where()`: is just an alias for `filter()`\n* `groupBy()`: groups the DataFrame using the specified columns, so we can run aggregation on them\n* `sort()`: returns a new DataFrame sorted by the specified column(s). By default the second parameter 'ascending' is True.\n* `dropDuplicates()`: returns a new DataFrame with unique rows based on all or just a subset of columns\n* `withColumn()`: returns a new DataFrame by adding a column or replacing the existing column that has the same name. The first parameter is the name of the new column, the second is an expression of how to compute it.\n\n#### Aggregate functions\n\nSpark SQL provides built-in methods for the most common aggregations such as `count()`, `countDistinct()`, `avg()`, `max()`, `min()`, etc. in the pyspark.sql.functions module. These methods are not the same as the built-in methods in the Python Standard Library, where we can find `min()` for example as well, hence you need to be careful not to use them interchangeably.\n\nIn many cases, there are multiple ways to express the same aggregations. For example, if we would like to compute one type of aggregate for one or more columns of the DataFrame we can just simply chain the aggregate method after a `groupBy()`. If we would like to use different functions on different columns, `agg() `comes in handy. For example `agg({\"salary\": \"avg\", \"age\": \"max\"})` computes the average salary and maximum age.\n\n#### User defined functions (UDF)\n\nIn Spark SQL we can define our own functions with the udf method from the pyspark.sql.functions module. The default type of the returned variable for UDFs is string. If we would like to return an other type we need to explicitly do so by using the different types from the pyspark.sql.types module.\n\n#### Window functions \n\nWindow functions are a way of combining the values of ranges of rows in a DataFrame. When defining the window we can choose how to sort and group (with the `partitionBy` method) the rows and how wide of a window we'd like to use (described by `rangeBetween` or `rowsBetween`). \n\n\nFor further information see the [Spark SQL, DataFrames and Datasets Guide](https://spark.apache.org/docs/latest/sql-programming-guide.html) and the [Spark Python API Docs](https://spark.apache.org/docs/latest/api/python/index.html).",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 778241,
+          "key": "02cfa30e-9e3b-4173-a074-2c53234f4216",
+          "title": "Data Wrangling with Spark [Example Code]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "02cfa30e-9e3b-4173-a074-2c53234f4216",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 778242,
+              "key": "9e2a1af8-b147-49d5-87bd-a45248bcf6fc",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6pg2xik3c2",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-boz16w8omx6",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/4_data_wrangling.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 666133,
+          "key": "feaf7659-1fab-460e-93ad-d19c0d863d1a",
+          "title": "Quiz - Data Wrangling with DataFrames",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "feaf7659-1fab-460e-93ad-d19c0d863d1a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 666153,
+              "key": "ed4369c7-e7e6-4f4f-9b60-da2ef4a6624c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Quiz\n\nAnswer these quiz questions. Use the \"sparkify_log_small.json\" file in the Spark Sandbox. You'll need to wrangle the data yourself to find the answers. You can use the Jupyter notebook in the next part of the lesson. \n\nAnswer code is provided after the Jupyter Notebook.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 666156,
+              "key": "e2da4df3-5a65-4196-bfa9-e9fdc659495f",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "e2da4df3-5a65-4196-bfa9-e9fdc659495f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which page did user id \"\" (empty string) NOT visit?",
+                "answers": [
+                  {
+                    "id": "a1530082930162",
+                    "text": "About",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1530082941943",
+                    "text": "Home",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1530082945639",
+                    "text": "Login",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1530082948629",
+                    "text": "NextSong",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 666157,
+              "key": "3e8b033c-a15a-441e-bf27-d6da4f75fc74",
+              "title": "Reflect",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3e8b033c-a15a-441e-bf27-d6da4f75fc74",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "title": null,
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "What type of user does the empty string user id most likely refer to?\n"
+              },
+              "answer": {
+                "text": "Users who are only visiting the About, Home and Login pages are probably unregistered visitors.",
+                "video": null
+              }
+            },
+            {
+              "id": 666134,
+              "key": "8d646bba-7276-4b96-9190-85c859b2a85f",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "8d646bba-7276-4b96-9190-85c859b2a85f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "How many female users do we have in the data set?",
+                "answers": [
+                  {
+                    "id": "a1530072303871",
+                    "text": "462",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1530072307989",
+                    "text": "501",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1530072309968",
+                    "text": "3820",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1530564313266",
+                    "text": "5844",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 666135,
+              "key": "fe4b5252-ea63-448f-b8de-b68d92e0898a",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "fe4b5252-ea63-448f-b8de-b68d92e0898a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "How many songs were played from the most played artist?",
+                "answers": [
+                  {
+                    "id": "a1530072394737",
+                    "text": "3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1530072412819",
+                    "text": "53",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1530072418307",
+                    "text": "83",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1530072429061",
+                    "text": "113",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 666136,
+              "key": "daf7733f-d38c-48d4-bbf5-51d25f896d60",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "daf7733f-d38c-48d4-bbf5-51d25f896d60",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "How many songs do users listen to on average between visiting our home page? Please round your answer to the closest integer.",
+                "answers": [
+                  {
+                    "id": "a1530072485559",
+                    "text": "5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1530072597847",
+                    "text": "7",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1530072600271",
+                    "text": "9",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1530072603524",
+                    "text": "11",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 778296,
+          "key": "ded49d0f-d31c-4338-8180-812c273d0cdb",
+          "title": "Quiz - Data Wrangling with DataFrames Jupyter Notebook",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ded49d0f-d31c-4338-8180-812c273d0cdb",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 778308,
+              "key": "66a0a6fb-65a9-4bbc-8bc3-ef5c2b910b34",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6pg2xik3c2",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-idsi0qf2sf",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/5_dataframe_quiz.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 778297,
+          "key": "79b6e174-d26d-4356-b3dd-6a93afafdbb9",
+          "title": "Quiz [Solution Code]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "79b6e174-d26d-4356-b3dd-6a93afafdbb9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 778302,
+              "key": "e3597003-1a3a-443e-8d03-c24e3ee753aa",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6pg2xik3c2",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-07gqey4epekj",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/6_dataframe_quiz_solution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 664565,
+          "key": "8f7b98a0-2951-4f98-9af8-fceb80aee1d3",
+          "title": "Spark SQL",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8f7b98a0-2951-4f98-9af8-fceb80aee1d3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 778312,
+              "key": "2fe9b5ec-ab97-4e4d-b3ad-8ce22419863d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Spark SQL",
+              "instructor_notes": ""
+            },
+            {
+              "id": 778310,
+              "key": "29f549a4-7ccf-4494-bd92-ccdc8dd8f024",
+              "title": "L2 05 01 Intro To SQL V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "0Iv5SdKf-u0",
+                "china_cdn_id": "0Iv5SdKf-u0.mp4"
+              }
+            },
+            {
+              "id": 783187,
+              "key": "2b53a95e-7412-47ab-93f7-6e87e9922486",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Spark SQL resources\n\nHere are a few resources that you might find helpful when working with Spark SQL\n* [Spark SQL built-in functions](https://spark.apache.org/docs/latest/api/sql/index.html)\n*  [Spark SQL guide](https://spark.apache.org/docs/latest/sql-getting-started.html)",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 701889,
+          "key": "1d50da39-e216-4d47-83fe-e1869e7c6ba1",
+          "title": "Example Spark SQL",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1d50da39-e216-4d47-83fe-e1869e7c6ba1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 778311,
+              "key": "34317378-0a76-40e7-bb9d-0f50c8c81ebc",
+              "title": "5 02 SCExplaining SparkSQL V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Y5nF4Q6n5pE",
+                "china_cdn_id": "Y5nF4Q6n5pE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 778316,
+          "key": "78ac15d5-d33f-42fe-8606-b79ca430f78f",
+          "title": "Example Spark SQL [Example Code]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78ac15d5-d33f-42fe-8606-b79ca430f78f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 778338,
+              "key": "a3dbe838-b3a8-4880-9791-98cef10709ab",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6pg2xik3c2",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-i66kr",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/7_data_wrangling-sql.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 783161,
+          "key": "6f14f4c1-1180-44a7-ae5e-cbe2fcbcb1c2",
+          "title": "Quiz - Data Wrangling with SparkSQL",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6f14f4c1-1180-44a7-ae5e-cbe2fcbcb1c2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 783163,
+              "key": "afdf08a8-8bd8-43ad-b444-9a7fa2e69aee",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6pg2xik3c2",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-snrkz",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/8_spark_sql_quiz.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 783162,
+          "key": "e703f510-e90a-4ced-b427-ef7bd29195cc",
+          "title": "Quiz [Spark SQL Solution Code]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e703f510-e90a-4ced-b427-ef7bd29195cc",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 783179,
+              "key": "a85cca59-5213-41dd-89e5-b4f6f9499e7c",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6pg2xik3c2",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-5z8oe",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/9_spark_sql_quiz_solution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 664576,
+          "key": "6af0e3f8-513d-4b76-affe-78ebd61f110d",
+          "title": "RDDs",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6af0e3f8-513d-4b76-affe-78ebd61f110d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 778339,
+              "key": "f33115f8-da87-423a-a4cd-ab04b9742b95",
+              "title": "L2 06 01 Sparks Core RDD API V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "8mhZD7rXQEY",
+                "china_cdn_id": "8mhZD7rXQEY.mp4"
+              }
+            },
+            {
+              "id": 666144,
+              "key": "6cd38888-75ad-4e90-a66e-3b3dfdf98f5f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "RDDs are a low-level abstraction of the data. In the first version of Spark, you worked directly with RDDs.\nYou can think of RDDs as long lists distributed across various machines. You can still use RDDs as part of your Spark code although data frames and SQL are easier. This course won't go into the details of RDD syntax, but you can find some further explanation of the difference between RDDs and DataFrames in Databricks' [A Tale of Three Apache Spark APIs: RDDs, DataFrames, and Datasets](https://databricks.com/blog/2016/07/14/a-tale-of-three-apache-spark-apis-rdds-dataframes-and-datasets.html) blog post.\n\nHere is a link to the Spark documentation's [RDD programming guide](https://spark.apache.org/docs/latest/rdd-programming-guide.html).",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 664578,
+          "key": "a8c47fac-9ef7-4aa0-aaf9-eb8165f8065d",
+          "title": "Summary",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a8c47fac-9ef7-4aa0-aaf9-eb8165f8065d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 778340,
+              "key": "0c7f1084-ca00-4b75-9b18-83fc5f4b9c85",
+              "title": "L2 07 01 Outro V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "hH030vkgme0",
+                "china_cdn_id": "hH030vkgme0.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

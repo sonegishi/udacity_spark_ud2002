@@ -1,0 +1,1194 @@
+{
+  "data": {
+    "lesson": {
+      "id": 790936,
+      "key": "e58f7601-b39a-4074-94e5-3cd5a1c9e3c6",
+      "title": "Machine Learning with Spark",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "In this lesson, we'll explore Spark's ML capabilities and build ML models and pipelines.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/e58f7601-b39a-4074-94e5-3cd5a1c9e3c6/790936/1545026817774/Machine+Learning+with+Spark+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/e58f7601-b39a-4074-94e5-3cd5a1c9e3c6/790936/1545026814606/Machine+Learning+with+Spark+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 669287,
+          "key": "b779eae4-c55d-4e0e-b032-aa9fcb33ca09",
+          "title": "Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b779eae4-c55d-4e0e-b032-aa9fcb33ca09",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 784460,
+              "key": "6766893c-60f6-4def-8fb1-4420c0bb750a",
+              "title": "L4 01 01 Intro V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "cBKGVTW54rQ",
+                "china_cdn_id": "cBKGVTW54rQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 669288,
+          "key": "50b5bc12-e865-4bc7-8663-aff237b154fb",
+          "title": "Machine Learning in Spark",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "50b5bc12-e865-4bc7-8663-aff237b154fb",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 669300,
+              "key": "67090022-19de-4e56-a416-5e1df8a3519f",
+              "title": "L4 02 01 Sparks ML Capabilities V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "J6u2E12Imxs",
+                "china_cdn_id": "J6u2E12Imxs.mp4"
+              }
+            },
+            {
+              "id": 680024,
+              "key": "9c6f9c4c-4b27-4c1a-9ad2-7fc2b8e2b824",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "At the time of this recording Spark’s latest release - version 2.2.1 - supports two machine learning libraries spark.ml and spark.mllib. Both libraries are part of Spark's Machine Learning Library known as MLlib.\n\nSpark.mllib is an RDD based library and it has been in maintenance mode since version 2.0. According to the current plans spark.ml, the Dataframe based API, will be feature complete by version 2.3 and then the older spark.mllib will be removed in Spark 3.0. So currently we might need to use a mixture of these two libraries but as time goes on you should focus on spark.ml as it’s becoming Spark’s standard machine learning library.\n\nThe term \"Spark ML\" is sometimes used to refer to the Spark Machine Learning library, which is officially called \"MLlib\". For further details see the [MLlib documentation](https://spark.apache.org/docs/latest/ml-guide.html). In the following tutorials we'll use the DataFrame-based API. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 669289,
+          "key": "13a837f3-cea3-408c-a1fd-c5679fb86c29",
+          "title": "Feature Extraction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "13a837f3-cea3-408c-a1fd-c5679fb86c29",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 669301,
+              "key": "7e05c3c0-5412-47bb-a2d4-46e5d88cb95d",
+              "title": "L4 03 01 Feature Extraction V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "roZ9V-pi6Yc",
+                "china_cdn_id": "roZ9V-pi6Yc.mp4"
+              }
+            },
+            {
+              "id": 689799,
+              "key": "99666326-955d-4ed9-92c3-4eb35ab78afa",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "You can find more information about the different scaler and indexer options through the links below.\n\nScalers\n- [Normalizer](https://spark.apache.org/docs/latest/ml-features.html#normalizer)\n- [StandardScaler](https://spark.apache.org/docs/latest/ml-features.html#standardscaler)\n- [MinMaxScaler](https://spark.apache.org/docs/latest/ml-features.html#minmaxscaler)\n- [MaxAbsScale](https://spark.apache.org/docs/latest/ml-features.html#maxabsscaler)\n\nIndexers\n- [StringIndexer](https://spark.apache.org/docs/latest/ml-features.html#stringindexer)\n- [IndexToString](https://spark.apache.org/docs/latest/ml-features.html#indextostring)\n- [VectorIndexer](https://spark.apache.org/docs/latest/ml-features.html#vectorindexer)\n\nTo learn more about text processing you can read further in the [documentation](https://spark.apache.org/docs/latest/ml-features.html#feature-extractors).",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 669315,
+          "key": "c0c734fd-d794-4778-ad0a-6a9c5dc040a0",
+          "title": "Numeric Features",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c0c734fd-d794-4778-ad0a-6a9c5dc040a0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 704268,
+              "key": "53f33d5c-96b2-475e-9e98-7d30c837490d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Numeric Features",
+              "instructor_notes": ""
+            },
+            {
+              "id": 704265,
+              "key": "83da8ee2-cdbd-47bc-91ba-9c841b3ced68",
+              "title": "L4 1 Normalizer",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "U4yDk255xQw",
+                "china_cdn_id": "U4yDk255xQw.mp4"
+              }
+            },
+            {
+              "id": 689792,
+              "key": "3ddcfe16-2cbc-493b-9cc3-f91d77a29192",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In the screencasts of this lesson, I've loaded the data set from an S3 bucket. You have access to the same data set directly from the classroom, the bucket shown in the video is private so you won't be able to access it.\n\nThe data comes from [StackOverflow data dumps](https://stackoverflow.blog/2009/06/04/stack-overflow-creative-commons-data-dump/).",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 784462,
+          "key": "ac577054-a835-4e2d-8975-bca5fa12a37c",
+          "title": "Numeric Features [Example Code]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ac577054-a835-4e2d-8975-bca5fa12a37c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 784464,
+              "key": "1cb33b2c-74f2-47db-8980-d2dae4485956",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r469169c784462xJUPYTERwpz71lxo",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-cyjac",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/1_numeric_features.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 669309,
+          "key": "8f38852d-bff4-41e5-970a-04bca1fdd4dd",
+          "title": "Text Processing",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8f38852d-bff4-41e5-970a-04bca1fdd4dd",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 704267,
+              "key": "5e446112-6162-49c7-b1ce-77e0341bb3cb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Text Processing",
+              "instructor_notes": ""
+            },
+            {
+              "id": 704266,
+              "key": "ffc35bf0-db60-448b-b04a-9da1dc0c8dbd",
+              "title": "L4 2 StringIndexer",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Kq4wZYF3C_w",
+                "china_cdn_id": "Kq4wZYF3C_w.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 785541,
+          "key": "d56112a0-a519-4ce1-a2b5-4a6be8049114",
+          "title": "Text Processing [Example Code]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d56112a0-a519-4ce1-a2b5-4a6be8049114",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 785542,
+              "key": "1c83a5ae-eb06-4f3a-95a7-39ea69e858c6",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r469169c784462xJUPYTERwpz71lxo",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-wszla",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/2_text_processing.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 682587,
+          "key": "ec0e699f-220b-43d4-a437-6e84ea5bceb8",
+          "title": "Quiz - Creating Features",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ec0e699f-220b-43d4-a437-6e84ea5bceb8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 690274,
+              "key": "39f712f4-a0e8-4f45-917b-a1a0b6ec8edc",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "To answer the questions below please use the Train_onetag_small.json data set you can access from the classroom. You'll find a workspace in the next section where you can write your code.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 690241,
+              "key": "82eef1f1-37a1-4366-aba2-a913135beef8",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "82eef1f1-37a1-4366-aba2-a913135beef8",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Select the question with Id = 1112. How many words does its body contain (check the BodyLength column)?",
+                "answers": [
+                  {
+                    "id": "a1533674052027",
+                    "text": "53",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533674383245",
+                    "text": "63",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1533674384190",
+                    "text": "73",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533674385009",
+                    "text": "83",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 690249,
+              "key": "3f5b83be-a698-42a1-b1d0-eef58ba37b5f",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3f5b83be-a698-42a1-b1d0-eef58ba37b5f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Create a new column that concatenates the question title and body. Apply the same functions we used before to compute the number of words in this combined column. What's the value in this new column for Id = 5123?",
+                "answers": [
+                  {
+                    "id": "a1533674436057",
+                    "text": "75",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533679213713",
+                    "text": "95",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533679214779",
+                    "text": "115",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533679215475",
+                    "text": "135",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 690283,
+              "key": "b9d3457c-1639-4684-99de-a571ebf20714",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Create a vector from the combined Title + Body length column. In the next few questions, you'll try different normalizer/scaler methods on this new column.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 690281,
+              "key": "a08876b3-1cc1-4c89-a339-f5a8aa77cd46",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a08876b3-1cc1-4c89-a339-f5a8aa77cd46",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Using the Normalizer method what's the normalized value for question Id = 512?",
+                "answers": [
+                  {
+                    "id": "a1533680188582",
+                    "text": "0.5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533680440502",
+                    "text": "1.0",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1533680441231",
+                    "text": "1.5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533680441925",
+                    "text": "2.0",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 690282,
+              "key": "424d5d5b-ea8d-4593-b26b-e56b8adb460d",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "424d5d5b-ea8d-4593-b26b-e56b8adb460d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Using the StandardScaler method (scaling both the mean and the standard deviation) what's the normalized value for question Id = 512?\n\n",
+                "answers": [
+                  {
+                    "id": "a1533680474123",
+                    "text": "-0.73",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533694044868",
+                    "text": "-0.64",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1533694046274",
+                    "text": "0.29",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533694046903",
+                    "text": "57",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 690344,
+              "key": "a1fc2b82-84c6-4d3c-9043-e132348dae5a",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a1fc2b82-84c6-4d3c-9043-e132348dae5a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Using the MinMAxScaler method what's the normalized value for question Id = 512?\n\n",
+                "answers": [
+                  {
+                    "id": "a1533694477696",
+                    "text": "0.0062",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1533694494362",
+                    "text": "0.0123",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533694495261",
+                    "text": "0.1576",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533694495893",
+                    "text": "0.3211",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 785543,
+          "key": "b2c32ee4-e42d-42f0-a0d5-42a8db1081c6",
+          "title": "Quiz - Creating Features [Workspace]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b2c32ee4-e42d-42f0-a0d5-42a8db1081c6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 785546,
+              "key": "bfb5ea21-5d79-4ef1-8779-38bb12f354ed",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r469169c784462xJUPYTERwpz71lxo",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-3i2l1",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/3_creating_features_quiz.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 669321,
+          "key": "b36a15c4-a9ac-4fed-8e41-76fdfe74ec89",
+          "title": "Dimensionality Reduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b36a15c4-a9ac-4fed-8e41-76fdfe74ec89",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 704269,
+              "key": "44e4ecb2-38b8-452f-aa41-fc488fa4f111",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Dimensionality Reduction",
+              "instructor_notes": ""
+            },
+            {
+              "id": 704270,
+              "key": "498bf094-1a05-4255-a37c-1f896ac43d33",
+              "title": "L4 3 PCA",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "r_BQRO9HBo0",
+                "china_cdn_id": "r_BQRO9HBo0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 669292,
+          "key": "9b1f807f-adcc-4970-84c7-7ad13abf1f77",
+          "title": "Supervised ML Algorithms",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9b1f807f-adcc-4970-84c7-7ad13abf1f77",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 669303,
+              "key": "a6131cf6-3d1f-45e2-b880-e4b6848978fc",
+              "title": "L4 04 01 Supervised ML Algorithms V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "rZcNQIexwHY",
+                "china_cdn_id": "rZcNQIexwHY.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 669330,
+          "key": "c87acb91-b4a4-4564-8a7f-f85b9744f306",
+          "title": "Linear Regression",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c87acb91-b4a4-4564-8a7f-f85b9744f306",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 704272,
+              "key": "b3a6751b-76f9-4e20-9251-5d46c474fac8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Linear Regression",
+              "instructor_notes": ""
+            },
+            {
+              "id": 704271,
+              "key": "37557bb0-1e62-4f49-857a-7982e1203b18",
+              "title": "L4 4 Linear Regression",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "bs289hAVTwg",
+                "china_cdn_id": "bs289hAVTwg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 689807,
+          "key": "f3a82400-cd54-4015-9d1a-9e7fd6bfcf87",
+          "title": "Linear Regression",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f3a82400-cd54-4015-9d1a-9e7fd6bfcf87",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 690989,
+              "key": "ec74c6c5-1e1a-4773-b58e-b4fdacf43ef2",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "ec74c6c5-1e1a-4773-b58e-b4fdacf43ef2",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Build a linear regression model using the length of the combined Title + Body fields. What is the value of r^2 when fitting a model with maxIter=5, regParam=0.0, fitIntercept=False, solver=\"normal\"?",
+                "answers": [
+                  {
+                    "id": "a1533699739426",
+                    "text": "0.42",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533847058261",
+                    "text": "0.44",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1533847059070",
+                    "text": "0.52",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533847059770",
+                    "text": "1.12",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 690992,
+              "key": "177101ce-d79b-4b53-886f-432f245757aa",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "177101ce-d79b-4b53-886f-432f245757aa",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What error message do you see if you try to use the column with Integers instead of vectors?",
+                "matchers": [
+                  {
+                    "expression": "^requirement failed: Column features must be of type org.apache.spark.ml.linalg.VectorUDT*"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 669331,
+          "key": "f8978667-6294-434d-82d4-555e0815a00e",
+          "title": "Logistic Regression",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f8978667-6294-434d-82d4-555e0815a00e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 704274,
+              "key": "6a19be5d-077e-4384-9d68-5ee560ae47b5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Logistic Regression",
+              "instructor_notes": ""
+            },
+            {
+              "id": 704273,
+              "key": "8611e295-1c60-4020-bc1c-ba0baee61b03",
+              "title": "L4 5 Logistic Regression",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "3nafRRNjA1g",
+                "china_cdn_id": "3nafRRNjA1g.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 669293,
+          "key": "4c882cde-7c5e-4ecc-9ea0-f4f7456d18e5",
+          "title": "Unsupervised ML Algorithms",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4c882cde-7c5e-4ecc-9ea0-f4f7456d18e5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 669304,
+              "key": "7830705e-b993-4088-975d-84914e631fdb",
+              "title": "L4 05 01 Unsupervised ML Algorithms V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "DccwZPFtvGw",
+                "china_cdn_id": "DccwZPFtvGw.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 689800,
+          "key": "ff92e6c7-1977-45c7-9882-d8d54d2075a8",
+          "title": "Quiz - K-means",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ff92e6c7-1977-45c7-9882-d8d54d2075a8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 691373,
+              "key": "c267970a-0490-45e5-8bc2-3d403a4780a1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "We might want to take a look at the distribution of the Title+Body length feature we used before and instead of using the raw number of words create categories based on this length: short, longer,..., super long.\n\nIn the questions below I'll refer to length of the combined Title and Body fields as Description Length (and by length we mean the number of words when the text is tokenized with pattern=\"\\\\W\").",
+              "instructor_notes": ""
+            },
+            {
+              "id": 691384,
+              "key": "379e095a-84fb-4d2f-9d22-f449d6ece017",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "379e095a-84fb-4d2f-9d22-f449d6ece017",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "How many times greater is the Description Length of the longest question than the Description Length of the shortest question (rounded to the nearest whole number)?\n\nTip: Don't forget to import Spark SQL's aggregate functions that can operate on DataFrame columns.",
+                "answers": [
+                  {
+                    "id": "a1533928882946",
+                    "text": "67",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533929044357",
+                    "text": "123",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533929045009",
+                    "text": "356",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533929045765",
+                    "text": "753",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 691387,
+              "key": "65444da0-bc7b-42fb-88e8-b49f359080b0",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "65444da0-bc7b-42fb-88e8-b49f359080b0",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is the mean and standard deviation of the Description length?",
+                "answers": [
+                  {
+                    "id": "a1533929327626",
+                    "text": "170, 64",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533929350046",
+                    "text": "180, 192",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1533929350730",
+                    "text": "180, 213",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533929351338",
+                    "text": "190, 319",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 691389,
+              "key": "9410efbe-b66b-46c8-9d4d-02c865600237",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9410efbe-b66b-46c8-9d4d-02c865600237",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Let's use K-means to create 5 clusters of Description Lengths. Set the random seed to 42 and fit a 5-class K-means model on the Description Length column (you can use KMeans().setParams(...) ).\nWhat length is the center of the cluster representing the longest questions?",
+                "answers": [
+                  {
+                    "id": "a1533929607467",
+                    "text": "92",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533929749616",
+                    "text": "180",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533929750251",
+                    "text": "2634",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1533929750830",
+                    "text": "7532",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 669294,
+          "key": "5c0516d8-3bbb-4bd6-954a-89af2e48c6f5",
+          "title": "ML Pipelines",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5c0516d8-3bbb-4bd6-954a-89af2e48c6f5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 669305,
+              "key": "48cf8dc0-bd12-4b2a-ab03-b1b11d1464e1",
+              "title": "L4 06 01 ML Pipelines V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Lpqs_wxLY1w",
+                "china_cdn_id": "Lpqs_wxLY1w.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 669333,
+          "key": "7baaf3ae-983a-495c-afcb-02a57021229e",
+          "title": "ML Pipeline Example",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7baaf3ae-983a-495c-afcb-02a57021229e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 704275,
+              "key": "e7722d56-864f-49ce-94a3-21cae64aa7c6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# ML Pipeline",
+              "instructor_notes": ""
+            },
+            {
+              "id": 704276,
+              "key": "124defb4-b359-4230-9d7e-306e57c6302c",
+              "title": "L4 6 Pipelines",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "qAKQRGbj6SQ",
+                "china_cdn_id": "qAKQRGbj6SQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 669295,
+          "key": "9a5fb87b-9e12-4429-9682-167e4bde0aef",
+          "title": "Model Selection and Tuning",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9a5fb87b-9e12-4429-9682-167e4bde0aef",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 669306,
+              "key": "e53b4a0b-87c5-4651-ad8c-de7d8ef4cc8e",
+              "title": "L4 07 01 Model Selection And Tuning V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "hrd7e2Ay_xw",
+                "china_cdn_id": "hrd7e2Ay_xw.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 669336,
+          "key": "c14e3c2e-077c-44d6-bf77-06f53f96c988",
+          "title": "Model Selection and Tuning Example",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c14e3c2e-077c-44d6-bf77-06f53f96c988",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 704278,
+              "key": "dc78527b-a209-4278-bbb5-d182443c71b7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Model Selection and Tuning",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797327,
+              "key": "0f65f094-bb67-4edc-8fc6-b51b41671a03",
+              "title": "L4 7 Model Selection V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "9C88S9mvQlY",
+                "china_cdn_id": "9C88S9mvQlY.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 689865,
+          "key": "9487c5cb-e613-4cd7-afb9-970a8c9bcb18",
+          "title": "Quiz - Model Tuning",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9487c5cb-e613-4cd7-afb9-970a8c9bcb18",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 691424,
+              "key": "d86f209d-86e6-4f27-b118-3266d0f24ed1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Let's continue exploring the parameter space for our question classification model.\n\nAs a first step break your data set into 90% of training data and set aside 10% to answer what's the accuracy of the best model you trained using unseen data.\n\nOn the first 90% of the data let's find the most accurate logistic regression model using 3-fold cross-validation with the following parameter grid:\n- CountVectorizer vocabulary size: [1000, 5000]\n- LogisticRegression regularization parameter: [0.0, 0.1]\n- LogisticRegression max Iteration number: [10]\n\nSet the random seeds of all stages of the pipeline to 42.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 691426,
+              "key": "f862ada4-31f4-4352-b58c-120ada91ecd0",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f862ada4-31f4-4352-b58c-120ada91ecd0",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is the accuracy of  the best model trained with the parameter grid described above (and keeping all other parameters at their default value computed on the 10% untouched data?",
+                "answers": [
+                  {
+                    "id": "a1533934244573",
+                    "text": "0.23",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533934306777",
+                    "text": "0.32",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1533934307805",
+                    "text": "0.39",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1533934308446",
+                    "text": "0.46",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 669296,
+          "key": "94953a35-b8af-445a-9af5-29781a244840",
+          "title": "Summary",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "94953a35-b8af-445a-9af5-29781a244840",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 704280,
+              "key": "f92e5c8c-f131-4971-a12c-ab0e4758df45",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Lesson Summary",
+              "instructor_notes": ""
+            },
+            {
+              "id": 669307,
+              "key": "1eb24748-7041-4d4d-8179-fc32eb07091c",
+              "title": "L4 08 01 Outro V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "IXQxrEb9CUM",
+                "china_cdn_id": "IXQxrEb9CUM.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
